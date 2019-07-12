@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
@@ -69,26 +70,26 @@
         <p class="slogan features__slogan">
           Нам есть что вам предложить!
         </p>
-        <div class="content-list features-list features__list">
+        <dl class="content-list features-list features__list">
           <div class="content-item features-list__item">
-            <p class="content-item__header">Поднимает настроение</p>
-            <p class="content-item__description">
+            <dt class="content-item__header">Поднимает настроение</dt>
+            <dd class="content-item__description">
               Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-            </p>
+            </dd>
           </div>
           <div class="content-item features-list__item">
-            <p class="content-item__header">Меняет мир вокруг</p>
-            <p class="content-item__description">
+            <dt class="content-item__header">Меняет мир вокруг</dt>
+            <dd class="content-item__description">
               Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-            </p>
+            </dd>
           </div>
           <div class="content-item features-list__item">
-            <p class="content-item__header">Заводит новых друзей<p>
-            <p class="content-item__decription">
+            <dt class="content-item__header">Заводит новых друзей<dt>
+            <dd class="content-item__decription">
               Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-            </p>
+            </dd>
           </div>
-        </div>
+        </dl>
         <img class="features__picture" src="img/phone.jpg" width="100" height="100" alt="Пример применения фотофильтра от Pink">
       </section>
       <section class="responses index-main__responses">
@@ -140,12 +141,15 @@
             </td>
             <td class="rate-component rate-component--yes rate-description__item">
               розовый фильтр
+              <span class="rate-component__value visually-hidden"> - да</span>
             </td>
             <td class="rate-component rate-component--no rate-description__item">
               смайлики
+              <span class="rate-component__value visually-hidden"> - нет</span>
             </td>
             <td class="rate-component rate-component--no rate-description__item">
               комментарии
+              <span class="rate-component__value visually-hidden"> - нет</span>
             </td>
           </tr>
           <tr class="rate-description rates-table__row">
@@ -155,12 +159,15 @@
             </td>
             <td class="rate-component rate-component--yes rate-description__item">
               розовый фильтр
+              <span class="rate-component__value visually-hidden"> - да</span>
             </td>
             <td class="rate-component rate-component--yes rate-description__item">
               смайлики
+              <span class="rate-component__value visually-hidden"> - да</span>
             </td>
             <td class="rate-component rate-component--no rate-description__item">
               комментарии
+              <span class="rate-component__value visually-hidden"> - нет</span>
             </td>
           </tr>
           <tr class="rate-description rates-table__row">
@@ -170,15 +177,44 @@
             </td>
             <td class="rate-component rate-component--yes rate-description__item">
               розовый фильтр
+              <span class="rate-component__value visually-hidden"> - да</span>
             </td>
             <td class="rate-component rate-component--yes rate-description__item">
               смайлики
+              <span class="rate-component__value visually-hidden"> - да</span>
             </td>
             <td class="rate-component rate-component--yes rate-description__item">
               комментарии
+              <span class="rate-component__value visually-hidden"> - да</span>
             </td>
           </tr>
         </table>
+      </section>
+      <section class="contacts index-main__contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts-card contacts__card">
+          <p class="slogan contacts-card__slogan">
+            Остались вопросы? Свяжитесь с нами!
+          </p>
+          <p class="contact contacts-card__item">
+            <span class="contact__header">Звоните:</span>
+            <span class="contact__value">+7 (812) 555-66-66</span>
+          </p>
+          <p class="contact contacts-card__item">
+            <span class="contact__header">Пишите:</span>
+            <span class="contact__value">
+              <a class="contact__value--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </span>
+          </p>
+          <p class="contact contacts-card__item">
+            <span class="contact__header">Приезжайте в гости:</span>
+            <span class="contact__value">ул. Большая Конюшенная, 19/8</span>
+          </p>
+        </div>
+        <div class="map contacts__map">
+          <img src="img/map.png" width="100" height="100" alt="Наш адрес на карте: г. Санкт-Петербург, ул. Большая Конюшенная, 19/8">
+        </div>
+        <div class="interactive-map contacts__map" id="map"></div>
       </section>
     </main>
   </body>
