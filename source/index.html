@@ -116,6 +116,70 @@
           </div>
         </div>
       </section>
+      <section class="rates index-main__rates">
+        <h2 class="visually-hidden">Выбор тарифа</h2>
+        <div class="slider-bullets rates__slider-bullets">
+          <input class="bullet" type="radio" name="rate" id="rate-bullet-first" value="rate-first">
+          <label class="bullet-label" for="rate-bullet-first">
+            <span class="visually-hidden">Показать первый тариф</span>
+          </label>
+          <input class="bullet" type="radio" name="rate" id="rate-bullet-second" value="rate-second" checked>
+          <label class="bullet-label" for="rate-bullet-second">
+            <span class="visually-hidden">Показать второй тариф</span>
+          </label>
+          <input class="buller" type="radio" name="rate" id="rate-bullet-third" value="rate-third">
+          <label class="bullet-label" for="rate-bullet-third">
+            <span class="visually-hidden">Показать третий тариф</span>
+          </label>
+        </div>
+        <table class="rates-table rates__table">
+          <tr class="rate-description rates-table__row">
+            <td class="rate rate-description__header">
+              <span class="rate__name">База</span>
+              <span class="rate__value">1,99 USD</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              розовый фильтр
+            </td>
+            <td class="rate-component rate-component--no rate-description__item">
+              смайлики
+            </td>
+            <td class="rate-component rate-component--no rate-description__item">
+              комментарии
+            </td>
+          </tr>
+          <tr class="rate-description rates-table__row">
+            <td class="rate rate--hit rate-description__header">
+              <span class="rate__name">Стандарт</span>
+              <span class="rate__value">3,99 USD</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              розовый фильтр
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              смайлики
+            </td>
+            <td class="rate-component rate-component--no rate-description__item">
+              комментарии
+            </td>
+          </tr>
+          <tr class="rate-description rates-table__row">
+            <td class="rate rate-description__header">
+              <span class="rate__name">Анлим</span>
+              <span class="rate__value">9,99 USD</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              розовый фильтр
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              смайлики
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              комментарии
+            </td>
+          </tr>
+        </table>
+      </section>
     </main>
   </body>
 </html>
