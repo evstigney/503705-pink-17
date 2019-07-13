@@ -10,7 +10,7 @@
       <a class="page-header__logo--small" href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="100" height="100" alt="Логотип фотоприложения Pink">
       </a>
-      <button class="page-header__menu-toggle--visible">
+      <button class="page-header__menu-toggle--visible" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <nav class="main-nav page-header__nav">
@@ -30,5 +30,32 @@
         </ul>
       </nav>
     </header>
+    <main class="inner-main photogallery-main">
+      <h1 class="slogan inner-main__main-header">Фотографии пользователей</h1>
+      <div class="inner-main__main-description">
+        Взгляните на фотогафии, которые выкладывают пользователи! Видите, как не хватает ваших?
+      </div>
+      <section class="posts photogallery-main__posts">
+        <h2 class="visually-hidden">Фотогалерея пользователей Pink</h2>
+        <div class="post post-of-the-day photogallery-main__posts-item">
+          <h3 class="post-of-the-day__header">Панорама дня</h3>
+          <a class="post__image-full" href="img/panorama-full.jpg">
+            <img class="post__image post-of-the-day__image" src="img/panorama.jpg" width="100" height="100" alt="Панорама">
+          </a>
+          <p class="post__author">
+            Анна <span class="post__author-time">(5 минут назад)</span>
+          </p>
+          <p class="post__description">
+            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую траансляцию в перископе, задавайте свои вопросы!
+          </p>
+          <p class="post__likes">
+            <button class="like" type="button">
+              <span class="visually-hidden">Поставьте лайк этой фотографии</span>
+            </button>
+            <span class="post__likes-total">Нравится: 215</span>
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
