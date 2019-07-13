@@ -157,6 +157,80 @@
           </p>
         </li>
       </ul>
+      <div class="page-description photogallery-main__bottom-description">
+        Затмите их всех! Выкладываайте все, что накопилось в телефоне!
+      </div>
+      <form class="photoeditor photogallery-main__photoeditor">
+        <h2 class="visually-hidden">Редактор ваших фотографий</h2>
+        <a class="post-image-full" href="img/photo7-full.jpg">
+          <img class="post__image photoeditor__image" src="img/photo7.jpg" width="100" height="100" alt="Зимняя дорога">
+        </a>
+        <ul class="icon-list photoeditor__list">
+          <li class="tool photoeditor__list-item">
+            <input class="box-input photoeditor__box-input" type="radio" name="tool" id="crop-radio" value="crop" checked>
+            <label class="box-label crop-tool photoeditor__tool photoeditor__tool--active" for="crop-radio">
+              <strong class="visually-hidden">Кадрирование</strong>
+            </label>
+            <div class="tool__scale crop-tool__scale photoeditor-tool__scale">
+              <button class="tool__scale-control" type="button">
+                <span class="visually-hidden">Изменить размер изображения</span>
+              </button>
+            </div>
+          </li>
+          <li class="tool photoeditor__list-item">
+            <input class="box-input photoeditor__box-input" type="radio" name="tool" id="fill-radio" value="fill">
+            <label class="box-label fill-tool photoeditor__tool" for="fill-radio">
+              <strong class="visually-hidden">Заливка</strong>
+            </label>
+            <div class="tool__scale fill-tool__scale photoeditor-tool__scale">
+              <button class="tool__scale-control" type="button">
+                <span class="visually-hidden">Изменить интенсивность заливки</span>
+              </button>
+            </div>
+          </li>
+          <li class="tool photoeditor__list-item">
+            <input class="box-input photoeditor__box-input" type="radio" name="tool" id="contrast-radio" value="contrast">
+            <label class="box-label contrast-tool photoeditor__tool" for="contrast-radio">
+              <strong class="visually-hidden">Контастность</strong>
+            </label>
+            <div class="tool__scale contrast-tool__scale photoeditor-tool__scale">
+              <button class="tool__scale-control" type="button">
+                <span class="visually-hidden">Изменить контрастность</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+        <button class="button upload-image-button photoeditor__button" type="button">Запостить</button>
+        <button class="button cancel-image-button photoeditor__button" type="button">Отмена</button>
+      </form>
     </main>
+    <footer class="page-footer inner-page__footer">
+      <a class="page-footer__logo-big" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-big.svg" width="100" height="100" alt="Логотип фотоприложения Pink">
+      </a>
+      <ul class="icon-list social-list page-footer__social-list">
+        <li class="page-footer__social-list-item">
+          <a class="social-list__item social-list__item-tw" href="https://twitter.com">
+            <span class="visually-hidden">Pink в Twitter</span>
+          </a>
+        </li>
+        <li class="page-footer__social-list-item">
+          <a class="social-list__item social-list__item-fb" href="https://facebook.com">
+            <span class="visually-hidden">Pink в Facebook</span>
+          </a>
+        </li>
+        <li class="page-footer__social-list-item">
+          <a class="social-list__item social-list__item-youtube">
+            <span class="visually-hidden">Pink на YouTube</span>
+          </a>
+        </li>
+      </ul>
+      <div class="dev-info page-footer__dev-info">
+        Разработано
+        <a class="div-icon dev-icon--small dev-info__icon" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
