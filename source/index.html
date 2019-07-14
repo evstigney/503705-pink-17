@@ -2,11 +2,220 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+    <header class="page-header">
+      <a class="page-header__logo page-header__logo--small">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="100" height="100" alt="Логотип фотоприложения Pink">
+      </a>
+      <button class="page-header__menu-toggle page-header__menu-toggle--visible" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <nav class="main-nav page-header__nav">
+        <ul class="site-list main-nav__list">
+          <li class="main-nav__list-item">
+            <a class="site-list__item site-list__item--active">Главная</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="site-list__item" href="photogallery.html">Фотографии</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="site-list__item" href="competition.html">Конкурс</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="site-list__item" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="index-main">
+      <h1 class="visually-hidden">Фотоприложение Pink</h1>
+      <section class="download-app index-main__download-app">
+        <h2 class="visually-hidden">Где скачать Pink</h2>
+        <div class="banner download-app__banner">
+          <p class="slogan banner__slogan">
+            Взгляните на жизнь иначе!
+          </p>
+          <img class="banner__picture" src="photo.jpg" width="100" height="100" alt="Фотоприложение Pink раскрасит ваши будни">
+        </div>
+        <p class="download-app__description">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+        <ul class="icon-list download-list download-app__list">
+          <li class="download-app__list-item">
+            <a class="download-list__item download-list__item-apple" href="https://itunes.apple.com">
+              <span class="visually-hidden">Pink в iTunes</span>
+            </a>
+          </li>
+          <li class="download-app__list-item">
+            <a class="download-list__item download-list__item-android" href="https://play.google.com">
+              <span class="visually-hidden">Pink в Google Play</span>
+            </a>
+          </li>
+          <li class="download-app__list-item">
+            <a class="download-list__item download-list__item-MS" href="https://www.microsoft.com/ru-ru/store/b/home">
+              <span class="visually-hidden">Pink в Microsoft Store</span>
+            </a>
+          </li>
+        </ul>
+        <a class="button download-button download-app__button" href="https://itunes.apple.com">Загрузить приложение</a>
+      </section>
+      <section class="features index-main__features">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <p class="slogan features__slogan">
+          Устали от серости мегаполиса?
+        </p>
+        <p class="slogan features__slogan">
+          Нам есть что вам предложить!
+        </p>
+        <dl class="content-list features-list features__list">
+          <div class="content-item features-list__item">
+            <dt class="content-item__header">Поднимает настроение</dt>
+            <dd class="content-item__description">
+              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+            </dd>
+          </div>
+          <div class="content-item features-list__item">
+            <dt class="content-item__header">Меняет мир вокруг</dt>
+            <dd class="content-item__description">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </dd>
+          </div>
+          <div class="content-item features-list__item">
+            <dt class="content-item__header">Заводит новых друзей<dt>
+            <dd class="content-item__decription">
+              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+            </dd>
+          </div>
+        </dl>
+        <img class="features__picture" src="img/phone.jpg" width="100" height="100" alt="Пример применения фотофильтра от Pink">
+      </section>
+      <section class="responses index-main__responses">
+        <h2 class="visually-hidden">Отзывы</h2>
+        <div class="slider-bullets responses__slider-bullets">
+          <input class="bullet" type="radio" name="responses" id="response-bullet-first" value="response-first" checked>
+          <label class="bullet-label" for="response-bullet-first">
+            <span class="visually-hidden">Показать первый отзыв</span>
+          </label>
+          <input class="bullet" type="radio" name="responses" id="response-bullet-second" value="response-second">
+          <label class="bullet-label" for="response-bullet-second">
+            <span class="visually-hidden">Показать второй отзыв</span>
+          </label>
+          <input class="bullet" type="radio" name="respnses" id="response-bullet-third" value="response-third">
+          <label class="bullet-label" for="response-bullet-third">
+            <span class="visually-hidden">Показать третий отзыв</span>
+          </label>
+        </div>
+        <div class="content-list responses-list responses__list">
+          <div class="content-item responses-list__item">
+            <p class="content-list__header">Николай Петров</p>
+            <blockquote class="content-list__description">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <section class="rates index-main__rates">
+        <h2 class="visually-hidden">Выбор тарифа</h2>
+        <div class="slider-bullets rates__slider-bullets">
+          <input class="bullet" type="radio" name="rate" id="rate-bullet-first" value="rate-first">
+          <label class="bullet-label" for="rate-bullet-first">
+            <span class="visually-hidden">Показать первый тариф</span>
+          </label>
+          <input class="bullet" type="radio" name="rate" id="rate-bullet-second" value="rate-second" checked>
+          <label class="bullet-label" for="rate-bullet-second">
+            <span class="visually-hidden">Показать второй тариф</span>
+          </label>
+          <input class="buller" type="radio" name="rate" id="rate-bullet-third" value="rate-third">
+          <label class="bullet-label" for="rate-bullet-third">
+            <span class="visually-hidden">Показать третий тариф</span>
+          </label>
+        </div>
+        <table class="rates-table rates__table">
+          <tr class="rate-description rates-table__row">
+            <td class="rate rate-description__header">
+              <span class="rate__name">База</span>
+              <span class="rate__value">1,99 USD</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              розовый фильтр
+              <span class="rate-component__value visually-hidden"> - да</span>
+            </td>
+            <td class="rate-component rate-component--no rate-description__item">
+              смайлики
+              <span class="rate-component__value visually-hidden"> - нет</span>
+            </td>
+            <td class="rate-component rate-component--no rate-description__item">
+              комментарии
+              <span class="rate-component__value visually-hidden"> - нет</span>
+            </td>
+          </tr>
+          <tr class="rate-description rates-table__row">
+            <td class="rate rate--hit rate-description__header">
+              <span class="rate__name">Стандарт</span>
+              <span class="rate__value">3,99 USD</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              розовый фильтр
+              <span class="rate-component__value visually-hidden"> - да</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              смайлики
+              <span class="rate-component__value visually-hidden"> - да</span>
+            </td>
+            <td class="rate-component rate-component--no rate-description__item">
+              комментарии
+              <span class="rate-component__value visually-hidden"> - нет</span>
+            </td>
+          </tr>
+          <tr class="rate-description rates-table__row">
+            <td class="rate rate-description__header">
+              <span class="rate__name">Анлим</span>
+              <span class="rate__value">9,99 USD</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              розовый фильтр
+              <span class="rate-component__value visually-hidden"> - да</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              смайлики
+              <span class="rate-component__value visually-hidden"> - да</span>
+            </td>
+            <td class="rate-component rate-component--yes rate-description__item">
+              комментарии
+              <span class="rate-component__value visually-hidden"> - да</span>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="contacts index-main__contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts-card contacts__card">
+          <p class="slogan contacts-card__slogan">
+            Остались вопросы? Свяжитесь с нами!
+          </p>
+          <p class="contact contacts-card__item">
+            <span class="contact__header">Звоните:</span>
+            <span class="contact__value">+7 (812) 555-66-66</span>
+          </p>
+          <p class="contact contacts-card__item">
+            <span class="contact__header">Пишите:</span>
+            <span class="contact__value">
+              <a class="contact__value-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </span>
+          </p>
+          <p class="contact contacts-card__item">
+            <span class="contact__header">Приезжайте в гости:</span>
+            <span class="contact__value">ул. Большая Конюшенная, 19/8</span>
+          </p>
+        </div>
+        <div class="map contacts__map">
+          <img src="img/map.png" width="100" height="100" alt="Наш адрес на карте: г. Санкт-Петербург, ул. Большая Конюшенная, 19/8">
+        </div>
+        <div class="interactive-map contacts__map" id="map"></div>
+      </section>
+    </main>
   </body>
 </html>
