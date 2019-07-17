@@ -1,0 +1,31 @@
+.bullet-label {
+  position: relative;
+
+  margin: 0;
+  margin-right: 1px;
+  padding: 0;
+}
+
+.bullet-label::before {
+  position: absolute;
+  bottom: 1px;
+  left: -12px;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+
+  background-color: #bec2c7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px @font-white;
+
+  content: "";
+}
+
+.bullet:checked + .bullet-label::before {
+  z-index: 1;
+  background-color: @bg-white;
+  box-shadow: 0 0 0 3px @font-dark;
+}
