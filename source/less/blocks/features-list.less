@@ -5,13 +5,5 @@
 }
 
 .features-list::before {
-  position: relative;
-
-  display: block;
-  width: 100%;
-  height: 34px;
-
-  background: linear-gradient(to left top, @bg-light-grey 50%, @bg-white 50%);
-
-  content: "";
+  .bg-diagonal(@bg-white, @bg-light-grey);
 }
