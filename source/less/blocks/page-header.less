@@ -1,5 +1,5 @@
 .page-header {
-  background-color: fade(@bg-grey, 30%);
+  background-color: @bg-grey;
 }
 
 .page-header__menu-toggle {
@@ -11,6 +11,10 @@
   .bg-burger;
 
   border: none;
+}
+
+.page-header__logo:hover {
+  text-decoration: none;
 }
 
 .page-header__menu-toggle--visible {
