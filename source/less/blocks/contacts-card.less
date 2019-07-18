@@ -1,13 +1,16 @@
+@bg-color: @bg-white;
+
 .contacts-card {
   position: relative;
 
-  background-color: red;
+  background-color: @bg-color;
 }
-/*
+
 .contacts-card::before,
 .contacts-card::after {
   position: absolute;
-  bottom: 0;
+  bottom: -36px;
+  z-index: 2;
 
   display: block;
   width: 50%;
@@ -27,4 +30,3 @@
 
   background: linear-gradient(to right bottom, @bg-color 50%, transparent 50%);
 }
-*/
