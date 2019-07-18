@@ -24,6 +24,16 @@
   content: "";
 }
 
+.bullet-label:hover::before {
+  background-color: #7e868f;
+}
+
+.bullet-label:active::before {
+  background:
+    linear-gradient(to bottom, fade(@font-dark, 10%), fade(@font-dark, 10%)),
+    @bg-color;
+}
+
 .bullet:checked + .bullet-label::before {
   z-index: 1;
   background-color: @bg-white;
