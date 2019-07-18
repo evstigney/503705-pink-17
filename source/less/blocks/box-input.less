@@ -1,0 +1,67 @@
+.box-input {
+  margin-left: 14px;
+}
+
+.box-input:focus {
+  outline-offset: 16px;
+}
+
+.box-input--label {
+  position: relative;
+}
+
+.box-input--label::before {
+  position: absolute;
+  top: -5px;
+  left: -34px;
+
+  display: block;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+
+  background-color: @bg-white;
+  border: 2px solid #e5e5e5;
+
+
+  content: "";
+}
+
+.box-input--label-radio::before {
+  border-radius: 50%;
+}
+
+.box-input--label:hover::before,
+.box-input:focus + .box-input--label::before {
+  border-color: @font-dark;
+}
+
+.box-input:active + .box-input--label::before {
+  border-color: @font-red;
+}
+
+.box-input--label-checkbox::after {
+  position: absolute;
+  top: 0;
+  left: -15px;
+
+  display: none;
+  width: 8px;
+  height: 21px;
+
+  background-color: transparent;
+  box-shadow: 2px 2px 0 0 @font-red;
+
+  transform: rotate(43deg);
+
+  content: "";
+}
+
+.box-input:checked + .box-input--label-checkbox::after {
+  display: block;
+}
+
+.box-input:checked + .box-input--label-radio::before {
+  background-color: @font-red;
+  box-shadow: inset 0 0 0 11px @bg-white;
+}
