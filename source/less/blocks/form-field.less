@@ -1,0 +1,28 @@
+.form-field {
+  box-sizing: border-box;
+
+  color: @font-dark;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+
+  background-color: @bg-white;
+  border: 2px solid #e5e5e5;
+}
+
+.form-field::placeholder {
+  color: @font-dark;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.form-field:hover {
+  border: 2px solid @font-dark;
+}
+
+.form-field:focus,
+.form-field:active {
+  border: 2px solid @font-red;
+
+  outline: none;
+}
