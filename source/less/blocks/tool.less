@@ -1,0 +1,86 @@
+.tool {
+  min-height: 66px;
+}
+
+.tool__label {
+  position: relative;
+
+  width: 1px;
+  height: 53px;
+  margin: 0;
+  padding: 0;
+  padding-right: 13px;
+}
+
+.tool__label::before {
+  position: absolute;
+  top: 0;
+  left: -35px;
+
+  display: block;
+  width: 53px;
+  height: 53px;
+
+  background-color: @bg-light-grey;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.tool__label--crop::before {
+  background-image: url("../img/icon-editor-crop.svg");
+}
+
+.box-input:checked + .tool__label--crop::before {
+  background-image: url("../img/icon-editor-crop-active.svg");
+}
+
+.tool__label--fill::before {
+  background-image: url("../img/icon-editor-fill.svg");
+}
+
+.box-input:checked + .tool__label--fill::before {
+  background-image: url("../img/icon-editor-fill-active.svg");
+}
+
+.tool__label--contrast::before {
+  background-image: url("../img/icon-editor-contrast.svg");
+}
+
+.box-input:checked + .tool__label--contrast::before {
+  background-image: url("../img/icon-editor-contrast-active.svg");
+}
+
+.tool__scale {
+  position: absolute;
+  top: auto;
+  left: 0;
+
+  display: none;
+  width: 240px;
+  height: 2px;
+
+  background-color: @font-dark;
+}
+
+.box-input:checked ~ .tool__scale {
+  display: block;
+}
+
+.tool__scale-control {
+  position: absolute;
+  top: -7px;
+  left: 100px;
+  z-index: 2;
+
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: @bg-white;
+  border: 2px solid @font-red;
+  border-radius: 50%;
+}

@@ -1,0 +1,77 @@
+.active(@color) {
+  color: fade(@color, 30%);
+}
+
+.button {
+  display: block;
+  width: 280px;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 45px;
+}
+
+.button:hover {
+  outline: none;
+}
+
+.button--download {
+  color: @font-white;
+
+  border-color: @font-white;
+}
+
+.button--download:hover {
+  color: @font-red;
+
+  background-color: @bg-white;
+}
+
+.button--download:active {
+  .active(@font-red);
+}
+
+.button--upload {
+  color: @font-red;
+
+  background-color: @bg-white;
+  border-color: @font-red;
+}
+
+.button--upload:hover {
+  color: @font-white;
+
+  background-color: @bg-red;
+}
+
+.button--upload:active {
+  .active(@font-white);
+}
+
+.button--cancel {
+  color: fade(@font-dark, 10%);
+
+  background-color: @bg-white;
+  border-color: fade(@font-dark, 10%);
+}
+
+.button--cancel:hover {
+  color: fade(@font-dark, 30%);
+
+  background-color: @bg-white;
+  border-color: fade(@font-dark, 30%);
+}
+
+.button--cancel:active {
+  .active(@font-white);
+
+  background-color: fade(@bg-grey, 30%);
+  border-color: fade(@font-dark, 30%);
+}

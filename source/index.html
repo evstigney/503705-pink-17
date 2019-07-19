@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo page-header__logo--small">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="100" height="100" alt="Логотип фотоприложения Pink">
+        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип фотоприложения Pink">
       </a>
       <button class="page-header__menu-toggle page-header__menu-toggle--visible" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -38,7 +39,7 @@
           <p class="slogan banner__slogan">
             Взгляните на жизнь иначе!
           </p>
-          <img class="banner__picture" src="photo.jpg" width="100" height="100" alt="Фотоприложение Pink раскрасит ваши будни">
+          <img class="banner__picture" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Фотоприложение Pink раскрасит ваши будни">
         </div>
         <p class="download-app__description">
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
@@ -55,12 +56,12 @@
             </a>
           </li>
           <li class="download-app__list-item">
-            <a class="download-list__item download-list__item-MS" href="https://www.microsoft.com/ru-ru/store/b/home">
+            <a class="download-list__item download-list__item-microsoft" href="https://www.microsoft.com/ru-ru/store/b/home">
               <span class="visually-hidden">Pink в Microsoft Store</span>
             </a>
           </li>
         </ul>
-        <a class="button download-button download-app__button" href="https://itunes.apple.com">Загрузить приложение</a>
+        <a class="button button--download download-app__button" href="https://itunes.apple.com">Скачать приложение</a>
       </section>
       <section class="features index-main__features">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -72,25 +73,25 @@
         </p>
         <dl class="content-list features-list features__list">
           <div class="content-item features-list__item">
-            <dt class="content-item__header">Поднимает настроение</dt>
-            <dd class="content-item__description">
+            <dt class="content-item__header features-list__item-header">Поднимает настроение</dt>
+            <dd class="content-item__description features-list__item-description">
               Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
             </dd>
           </div>
           <div class="content-item features-list__item">
-            <dt class="content-item__header">Меняет мир вокруг</dt>
-            <dd class="content-item__description">
+            <dt class="content-item__header features-list__item-header">Меняет мир вокруг</dt>
+            <dd class="content-item__description features-list__item-description">
               Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
             </dd>
           </div>
           <div class="content-item features-list__item">
-            <dt class="content-item__header">Заводит новых друзей<dt>
-            <dd class="content-item__decription">
+            <dt class="content-item__header features-list__item-header">Заводит новых друзей</dt>
+            <dd class="content-item__description features-list__item-description">
               Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
             </dd>
           </div>
         </dl>
-        <img class="features__picture" src="img/phone.jpg" width="100" height="100" alt="Пример применения фотофильтра от Pink">
+        <img class="features__picture" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Пример применения фотофильтра от Pink">
       </section>
       <section class="responses index-main__responses">
         <h2 class="visually-hidden">Отзывы</h2>
@@ -103,15 +104,15 @@
           <label class="bullet-label" for="response-bullet-second">
             <span class="visually-hidden">Показать второй отзыв</span>
           </label>
-          <input class="bullet" type="radio" name="respnses" id="response-bullet-third" value="response-third">
+          <input class="bullet" type="radio" name="responses" id="response-bullet-third" value="response-third">
           <label class="bullet-label" for="response-bullet-third">
             <span class="visually-hidden">Показать третий отзыв</span>
           </label>
         </div>
         <div class="content-list responses-list responses__list">
           <div class="content-item responses-list__item">
-            <p class="content-list__header">Николай Петров</p>
-            <blockquote class="content-list__description">
+            <p class="content-item__header">Николай Петров</p>
+            <blockquote class="content-item__description">
               «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
             </blockquote>
           </div>
@@ -128,64 +129,64 @@
           <label class="bullet-label" for="rate-bullet-second">
             <span class="visually-hidden">Показать второй тариф</span>
           </label>
-          <input class="buller" type="radio" name="rate" id="rate-bullet-third" value="rate-third">
+          <input class="bullet" type="radio" name="rate" id="rate-bullet-third" value="rate-third">
           <label class="bullet-label" for="rate-bullet-third">
             <span class="visually-hidden">Показать третий тариф</span>
           </label>
         </div>
         <table class="rates-table rates__table">
-          <tr class="rate-description rates-table__row">
-            <td class="rate rate-description__header">
+          <tr class="rate rates-table__row">
+            <td class="rate__header">
               <span class="rate__name">База</span>
               <span class="rate__value">1,99 USD</span>
             </td>
-            <td class="rate-component rate-component--yes rate-description__item">
+            <td class="rate__component rate__component--yes">
               розовый фильтр
-              <span class="rate-component__value visually-hidden"> - да</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
             </td>
-            <td class="rate-component rate-component--no rate-description__item">
+            <td class="rate__component rate__component--no">
               смайлики
-              <span class="rate-component__value visually-hidden"> - нет</span>
+              <span class="rate__component-value visually-hidden"> - нет</span>
             </td>
-            <td class="rate-component rate-component--no rate-description__item">
+            <td class="rate__component rate__component--no">
               комментарии
-              <span class="rate-component__value visually-hidden"> - нет</span>
+              <span class="rate__component-value visually-hidden"> - нет</span>
             </td>
           </tr>
-          <tr class="rate-description rates-table__row">
-            <td class="rate rate--hit rate-description__header">
+          <tr class="rate rate--hit rates-table__row">
+            <td class="rate__header rate__header--hit">
               <span class="rate__name">Стандарт</span>
               <span class="rate__value">3,99 USD</span>
             </td>
-            <td class="rate-component rate-component--yes rate-description__item">
+            <td class="rate__component rate__component--yes">
               розовый фильтр
-              <span class="rate-component__value visually-hidden"> - да</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
             </td>
-            <td class="rate-component rate-component--yes rate-description__item">
+            <td class="rate__component rate__component--yes">
               смайлики
-              <span class="rate-component__value visually-hidden"> - да</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
             </td>
-            <td class="rate-component rate-component--no rate-description__item">
+            <td class="rate__component rate__component--no">
               комментарии
-              <span class="rate-component__value visually-hidden"> - нет</span>
+              <span class="rate__component-value visually-hidden"> - нет</span>
             </td>
           </tr>
-          <tr class="rate-description rates-table__row">
-            <td class="rate rate-description__header">
+          <tr class="rate rates-table__row">
+            <td class="rate__header">
               <span class="rate__name">Анлим</span>
               <span class="rate__value">9,99 USD</span>
             </td>
-            <td class="rate-component rate-component--yes rate-description__item">
+            <td class="rate__component rate__component--yes">
               розовый фильтр
-              <span class="rate-component__value visually-hidden"> - да</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
             </td>
-            <td class="rate-component rate-component--yes rate-description__item">
+            <td class="rate__component rate__component--yes">
               смайлики
-              <span class="rate-component__value visually-hidden"> - да</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
             </td>
-            <td class="rate-component rate-component--yes rate-description__item">
+            <td class="rate__component rate__component--yes">
               комментарии
-              <span class="rate-component__value visually-hidden"> - да</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
             </td>
           </tr>
         </table>
@@ -211,9 +212,7 @@
             <span class="contact__value">ул. Большая Конюшенная, 19/8</span>
           </p>
         </div>
-        <div class="map contacts__map">
-          <img src="img/map.png" width="100" height="100" alt="Наш адрес на карте: г. Санкт-Петербург, ул. Большая Конюшенная, 19/8">
-        </div>
+        <div class="static-map contacts__map"></div>
         <div class="interactive-map contacts__map" id="map"></div>
       </section>
     </main>
