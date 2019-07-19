@@ -42,3 +42,32 @@
 .page-header__menu-toggle--hidden {
   background-image: url("../img/icon-menu-burger.svg");
 }
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    padding-top: 26px;
+  }
+
+  .page-header__logo {
+    margin-bottom: 37px;
+  }
+
+  .page-header__menu-toggle {
+    top: 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    background-color: fade(#000000, 30%);
+  }
+
+  .page-header__logo {
+    width: 158px;
+    margin-left: 131px;
+  }
+
+  .page-header__menu-toggle {
+    display: none;
+  }
+}

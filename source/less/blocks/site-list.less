@@ -39,3 +39,40 @@
     inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
     0 -1px 0 0 #000000;
 }
+
+.main-nav__list-item:last-of-type .site-list__item {
+  padding-bottom: 14px;
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 650px;
+    margin-left: 161px;
+
+
+    background-color: transparent;
+    border: none;
+  }
+
+  .site-list__item {
+    width: auto;
+    padding-top: 19px;
+
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: none;
+
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .site-list__item:hover {
+    box-shadow: none;
+  }
+
+  .main-nav__list-item:not(:nth-of-type(4n)) .site-list__item {
+    margin-right: 84px;
+  }
+}

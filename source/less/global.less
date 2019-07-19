@@ -1,9 +1,10 @@
 body {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin: auto;
+  width: 100vw;
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   color: @font-dark;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -12,6 +13,13 @@ body {
   font-weight: 400;
 
   background-color: @bg-white;
+
+  overflow-x: hidden;
+}
+
+body > * {
+  width: 320px;
+  margin: 0 auto;
 }
 
 a {
@@ -27,13 +35,17 @@ a:active {
 }
 
 @media (min-width: @tablet-width) {
-  body {
+  body > * {
     width: @tablet-width;
   }
 }
 
 @media (min-width: @desktop-width) {
-  body {
+  body > * {
     width: @desktop-width;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
   }
 }
