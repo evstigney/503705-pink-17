@@ -8,7 +8,9 @@
   margin: 0;
   padding: 0;
 
-  .bg-burger;
+  background-color: transparent;
+  background-position: top center;
+  background-repeat: no-repeat;
 
   border: none;
 }
@@ -18,7 +20,9 @@
 }
 
 .page-header__menu-toggle--visible {
-  /* поставлю позже, пока под вопросом
-  display: none;
-  */
+  background-image: url("../img/icon-menu-cross.svg");
+}
+
+.page-header__menu-toggle--hidden {
+  background-image: url("../img/icon-menu-burger.svg");
 }
