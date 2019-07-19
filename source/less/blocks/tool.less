@@ -1,0 +1,54 @@
+@bg-color: @bg-light-grey;
+
+.tool {
+}
+
+.tool__label {
+  position: relative;
+
+  width: 1px;
+  height: 53px;
+  margin: 0;
+  padding: 0;
+  padding-right: 13px;
+}
+
+.tool__label::before {
+  position: absolute;
+  top: 0;
+  left: -35px;
+
+  display: block;
+  width: 53px;
+  height: 53px;
+
+  background-color: @bg-color;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.tool__label--crop::before {
+  background-image: url("../img/icon-editor-crop.svg");
+}
+
+.box-input:checked + .tool__label--crop::before {
+  background-image: url("../img/icon-editor-crop-active.svg")
+}
+
+.tool__label--fill::before {
+  background-image: url("../img/icon-editor-fill.svg");
+}
+
+.box-input:checked + .tool__label--fill::before {
+  background-image: url("../img/icon-editor-fill-active.svg");
+}
+
+.tool__label--contrast::before {
+  background-image: url("../img/icon-editor-contrast.svg");
+}
+
+.box-input:checked + .tool__label--contrast::before {
+  background-image: url("../img/icon-editor-contrast-active.svg");
+}
