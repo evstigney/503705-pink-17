@@ -19,9 +19,13 @@
   background-color: #bec2c7;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px @bg-color;
+  box-shadow: 0 0 0 3px @bg-white;
 
   content: "";
+}
+
+.rates .bullet-label::before {
+box-shadow: 0 0 0 3px @bg-light-grey;
 }
 
 .bullet-label:hover::before {
@@ -30,8 +34,7 @@
 
 .bullet-label:active::before {
   background:
-    linear-gradient(to bottom, fade(@font-dark, 10%), fade(@font-dark, 10%)),
-    @bg-color;
+    linear-gradient(to bottom, fade(@font-dark, 10%), fade(@font-dark, 10%));
 }
 
 .bullet:checked + .bullet-label::before {
