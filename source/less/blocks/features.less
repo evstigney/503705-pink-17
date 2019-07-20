@@ -5,3 +5,30 @@
 .features__slogan:last-of-type {
   margin-bottom: 29px;
 }
+
+.features__list {
+  margin-bottom: 42px;
+}
+
+.features__picture {
+  position: relative;
+  top: 12px;
+  left: 83px;
+  z-index: 2;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    position: relative;
+  }
+
+  .features__slogan:last-of-type {
+    margin-bottom: 39px;
+  }
+
+  .features__picture {
+    position: absolute;
+    top: 196px;
+    left: 21px;
+  }
+}

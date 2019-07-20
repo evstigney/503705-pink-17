@@ -11,6 +11,17 @@
   background-color: @bg-white;
 }
 
-.banner.slogan {
-  color: @font-white;
+@media (min-width: @tablet-width) {
+  .slogan.features__slogan {
+    margin-bottom: 0;
+
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .slogan:nth-of-type(2) {
+    width: 354px;
+    padding-left: 153px;
+    padding-right: 153px;
+  }
 }

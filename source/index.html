@@ -80,27 +80,30 @@
         <p class="slogan features__slogan">
           Нам есть что вам предложить!
         </p>
-        <dl class="content-list features-list features__list">
-          <div class="content-item features-list__item">
-            <dt class="content-item__header features-list__item-header">Поднимает настроение</dt>
-            <dd class="content-item__description features-list__item-description">
+        <dl class="features-list features__list">
+          <div class="features-list__item features__list-item">
+            <dt class="features-list__item-header">Поднимает настроение</dt>
+            <dd class="features-list__item-description">
               Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
             </dd>
           </div>
-          <div class="content-item features-list__item">
-            <dt class="content-item__header features-list__item-header">Меняет мир вокруг</dt>
-            <dd class="content-item__description features-list__item-description">
-              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          <div class="features-list__item features__list-item">
+            <dt class="features-list__item-header">Меняет мир вокруг</dt>
+            <dd class="features-list__item-description">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект
             </dd>
           </div>
-          <div class="content-item features-list__item">
-            <dt class="content-item__header features-list__item-header">Заводит новых друзей</dt>
-            <dd class="content-item__description features-list__item-description">
+          <div class="features-list__item features__list-item">
+            <dt class="features-list__item-header">Заводит новых друзей</dt>
+            <dd class="features-list__item-description">
               Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
             </dd>
           </div>
         </dl>
-        <img class="features__picture" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Пример применения фотофильтра от Pink">
+        <picture class="features__picture">
+          <source srcset="img/iphone-screen-3-tablet@1x.png" media="(min-width: 660px)">
+          <img src="img/iphone-screen-mobile@1x.png" alt="Пример применения фотофильтра от Pink">
+        </picture>
       </section>
       <section class="responses index-main__responses">
         <h2 class="visually-hidden">Отзывы</h2>
@@ -118,7 +121,7 @@
             <span class="visually-hidden">Показать третий отзыв</span>
           </label>
         </div>
-        <div class="content-list responses-list responses__list">
+        <div class="responses-list responses__list">
           <div class="content-item responses-list__item">
             <p class="content-item__header">Николай Петров</p>
             <blockquote class="content-item__description">
