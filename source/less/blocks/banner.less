@@ -1,18 +1,38 @@
 .banner {
-  line-height: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 85px;
 
-  background-color: @bg-grey;
-  .bg-banner-mobile;
-}
-
-.banner .banner__slogan {
   color: @font-white;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 200;
+  text-align: center;
 
   background-color: @bg-grey;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.index-main .banner__slogan {
-  .visually-hidden;
+.banner__slogan {
+  width: 274px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 26px;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.download-app__banner {
+  margin-bottom: 29px;
+}
+
+.download-app__button {
+  margin: 0 auto;
 }
 
 @media (min-width: @desktop-width) {

@@ -9,11 +9,34 @@
   background-color: @bg-grey;
 }
 
+.main-nav__list {
+  position: relative;
+}
+
+.main-nav__list-item:last-of-type {
+  position: absolute;
+  top: auto;
+  left: auto;
+
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list-item:last-of-type {
+    width: @tablet-width;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .main-nav {
     width: auto;
 
-
     background-color: transparent;
+  }
+
+  .main-nav__list-item:last-of-type {
+    position: static;
+
+    width: auto;
   }
 }
