@@ -1,9 +1,57 @@
 .features-list {
+  position: relative;
+
   margin: 0;
   padding: 0;
+  padding-top: 52px;
+
   background-color: @bg-light-grey;
 }
 
 .features-list::before {
+  position: absolute;
+  top: -52px;
+  left: 0;
+
   .bg-diagonal(@bg-white, @bg-light-grey);
+}
+
+.features-list__item {
+  margin-bottom: 30px;
+}
+
+.features-list__item-header {
+  margin-bottom: 12px;
+}
+
+.features-list__item-description {
+  margin-left: 38px;
+  margin-right: 38px;
+}
+
+.features__list {
+  margin-bottom: 42px;
+}
+
+.features__picture {
+  position: relative;
+  top: auto;
+  left: 50%;
+  z-index: 2;
+
+  transform: translateX(-50%);
+}
+
+.features__list::after {
+  position: absolute;
+  bottom: -450px;
+  left: 0;
+
+  display: block;
+  width: 320px;
+  height: 450px;
+
+  background-color: @bg-light-grey;
+
+  content: "";
 }
