@@ -56,7 +56,9 @@
     border: none;
   }
 
-  .site-list__item {
+  .site-list__item,
+  .site-list__item--active,
+  .site-list__item--active:hover {
     width: auto;
     padding-top: 19px;
 
@@ -74,5 +76,9 @@
 
   .main-nav__list-item:not(:nth-of-type(4n)) .site-list__item {
     margin-right: 84px;
+  }
+
+  .main-nav__list-item:last-of-type .site-list__item {
+    border-bottom: none;
   }
 }
