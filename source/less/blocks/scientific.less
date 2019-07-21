@@ -1,0 +1,85 @@
+.scientific {
+  position: relative;
+
+  display: none;
+}
+
+.scientific::before {
+  .pseudo-absolute;
+
+  top: -38px;
+  left: 20px;
+
+  width: 240px;
+  height: 306px;
+  padding-top: 104px;
+
+  color: @font-red;
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 700;
+  text-align: center;
+
+  background-color: @bg-white;
+  background-image: url("../img/icon-timer.svg");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  content: "24";
+}
+
+.scientific::after {
+  .pseudo-absolute;
+
+  top: 18px;
+  left: 39px;
+
+  width: 202px;
+  height: 202px;
+
+  background-color: transparent;
+  border: 14px solid @font-red;
+  border-radius: 50%;
+}
+
+.scientific__header {
+  margin-bottom: 10px;
+
+  color: #000000;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.scientific__description {
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+}
+
+.scientific__details {
+  color: @font-red;
+  text-decoration: underline;
+}
+
+.scientific__details:hover {
+  color: @font-dark;
+}
+
+.scientific__details:active {
+  color: fade(@font-dark, 30%);
+}
+
+@media (min-width: @tablet-width) {
+  .scientific {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scientific > * {
+    width: 295px;
+    margin-left: auto;
+    padding-right: 35px;
+  }
+}
