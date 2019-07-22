@@ -9,7 +9,6 @@
 }
 
 .responses-list__item-header {
-  display: block;
   margin: 0;
   margin-bottom: 12px;
   padding: 0;
@@ -18,8 +17,40 @@
   font-size: 18px;
 }
 
+.responses-list__item-header-info {
+  display: none;
+}
+
 .responses-list__item-description {
   width: 270px;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .responses-list__item {
+    flex-direction: column-reverse;
+    padding-top: 0;
+
+    font-size: 18px;
+  }
+
+  .responses-list__item-header {
+    margin-bottom: 0;
+
+    font-size: 20px;
+  }
+
+  .responses-list__item-header-info {
+    display: block;
+
+    font-size: 14px;
+  }
+
+  .responses-list__item-description {
+    width: auto;
+    margin-bottom: 37px;
+    padding-left: 17px;
+    padding-right: 26px;
+  }
 }

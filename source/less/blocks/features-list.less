@@ -67,7 +67,7 @@
   .features-list {
     display: flex;
     flex-direction: column;
-    padding-bottom: 8px;
+    padding-bottom: 0;
   }
 
   .features-list::before {
@@ -96,6 +96,10 @@
     width: 310px;
     margin-left: auto;
     padding-right: 20px;
+  }
+
+  .features-list__item:last-of-type {
+    margin-bottom: 0;
   }
 
   .features-list__item-header,
