@@ -4,7 +4,7 @@
   display: none;
 }
 
-.scientific::before {
+.scientific__header::before {
   .pseudo-absolute;
 
   top: -38px;
@@ -12,15 +12,15 @@
 
   width: 240px;
   height: 306px;
-  padding-top: 104px;
+  padding-top: 78px;
 
   color: @font-red;
   font-size: 96px;
-  line-height: 96px;
+  line-height: 149px;
   font-weight: 700;
   text-align: center;
 
-  background-color: @bg-white;
+  background-color: transparent;
   background-image: url("../img/icon-timer.svg");
   background-position: top center;
   background-size: contain;
@@ -29,7 +29,7 @@
   content: "24";
 }
 
-.scientific::after {
+.scientific__header::after {
   .pseudo-absolute;
 
   top: 18px;
@@ -81,5 +81,82 @@
     width: 295px;
     margin-left: auto;
     padding-right: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .scientific {
+    position: relative;
+
+    align-self: flex-start;
+    width: 100%;
+    padding-top: 115px;
+    padding-bottom: 113px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .scientific::before {
+    .pseudo-absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 100vw;
+
+    font-size: 120px;
+    line-height: 187px;
+
+    background-color: @bg-light-grey;
+
+    transform: translateX(-50%);
+  }
+
+  .scientific > * {
+    width: 540px;
+    margin-left: 498px;
+    padding-right: 100px;
+  }
+
+  .scientific__header {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 20px;
+  }
+
+  .scientific__header::before {
+    top: -90px;
+    left: -368px;
+
+    width: 302px;
+    height: 345px;
+    padding-top: 94px;
+
+    font-size: 120px;
+    line-height: 187px;
+  }
+
+  .scientific__header::after {
+    top: -21px;
+    left: -345px;
+
+    width: 253px;
+    height: 253px;
+
+    border-width: 16px;
+  }
+
+  .scientific__description {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 32px;
+  }
+
+  .scientific__details {
+    position: relative;
+    z-index: 2;
   }
 }
