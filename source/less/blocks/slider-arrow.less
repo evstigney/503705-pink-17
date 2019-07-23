@@ -1,0 +1,25 @@
+.slider-arrow {
+  display: block;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+
+  border-left: 2px solid fade(@font-dark, 30%);
+  border-bottom: 2px solid fade(@font-dark, 30%);
+}
+
+.slider-arrow--prev {
+  transform: rotate(45deg);
+}
+
+.slider-arrow--next {
+  transform: rotate(-135deg);
+}
+
+.slider-arrow:hover {
+  border-color: fade(@font-dark, 60%);
+}
+
+.slider-arrow:active {
+  border-color: fade(@font-dark, 10%);
+}
