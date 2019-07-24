@@ -17,10 +17,6 @@
   font-size: 18px;
 }
 
-.responses-list__item-header-info {
-  display: none;
-}
-
 .responses-list__item-description {
   width: 270px;
   margin: 0;
@@ -45,6 +41,7 @@
 @media (min-width: @tablet-width) {
   .responses-list__item {
     flex-direction: column-reverse;
+    width: 644px;
     padding-top: 0;
 
     font-size: 18px;
@@ -115,5 +112,11 @@
     background-image: url("../img/icon-quotes.svg");
     background-position: center;
     background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .responses-list__item-header-info {
+    .visually-hidden;
   }
 }
