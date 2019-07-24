@@ -1,4 +1,6 @@
 .download-app {
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -10,11 +12,20 @@
   background-color: @bg-dark-grey;
 }
 
+.download-app::before {
+  .pseudo-absolute;
+  .center-100vw;
+
+  background-color: @bg-dark-grey;
+}
+
 .download-app__banner {
   margin-bottom: 29px;
 }
 
 .download-app__button {
+  position: relative;
+
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
@@ -22,6 +33,8 @@
 }
 
 .download-app__description {
+  position: relative;
+
   width: 240px;
   margin: 0;
   margin-left: 40px;
@@ -33,6 +46,8 @@
 }
 
 .download-app__list {
+  position: relative;
+
   margin-bottom: 23px;
   margin-left: 57px;
   margin-right: 50px;

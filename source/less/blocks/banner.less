@@ -1,4 +1,6 @@
 .banner {
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -13,17 +15,27 @@
   text-align: center;
 
   background-color: @bg-grey;
+}
+
+.banner::before {
+  .pseudo-absolute;
+  .center-100vw;
+
+  background-color: @bg-grey;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .banner__picture {
+  position: relative;
+
   line-height: 0;
 }
 
 .banner__slogan {
+  position: relative;
+
   width: 274px;
   margin: 0;
   padding: 0;
@@ -39,7 +51,6 @@
     font-weight: 200;
 
     background-color: transparent;
-    background-image: none;
   }
 
   .banner__slogan {

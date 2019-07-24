@@ -19,6 +19,16 @@
   content: "";
 }
 
+.center-100vw {
+  position: absolute;
+
+  left: 50%;
+
+  width: 100vw;
+
+  transform: translateX(-50%);
+}
+
 /*---- visually-hidden ----*/
 
 .visually-hidden {
@@ -35,15 +45,4 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.visually-absolute {
-  position: absolute;
-
-  width: auto;
-  height: auto;
-
-  clip-path: none;
-  clip: none;
-  overflow: visible;
 }

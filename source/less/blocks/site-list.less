@@ -6,13 +6,18 @@
 }
 
 .site-list__item {
+  position: relative;
+  left: 50%;
+
   display: block;
-  width: 100%;
+  width: 100vw;
   padding-top: 16px;
   padding-bottom: 16px;
 
   text-align: center;
   text-transform: uppercase;
+
+  transform: translateX(-50%);
 }
 
 .site-list__item:hover {

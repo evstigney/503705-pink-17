@@ -3,23 +3,26 @@
 
   margin: 0;
   padding: 0;
-  padding-top: 84px;
+  padding-top: 91px;
 
   background-color: transparent;
 }
 
 .features-list::before {
-  .pseudo-absolute();
+  .pseudo-absolute;
+  .center-100vw;
+
   background-color: @bg-light-grey;
 }
 
 .features-list::after {
   .pseudo-absolute;
+  .center-100vw;
   .bg-diagonal(@bg-white, @bg-light-grey);
 
   z-index: 1;
 
-  height: 35px;
+  height: 51px;
 }
 
 .features-list__item {
