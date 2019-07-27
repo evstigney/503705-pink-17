@@ -4,7 +4,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: flex-start;
-  width: 243px;
+  min-width: 243px;
 }
 
 .social-list__item {
@@ -43,4 +43,10 @@
   border-color: @font-dark;
 
   opacity: 0.3;
+}
+
+@media (min-width: @desktop-width) {
+  .social-list {
+    width: 325px;
+  }
 }

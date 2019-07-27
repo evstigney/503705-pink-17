@@ -38,3 +38,16 @@
     left: 48%;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .static-map {
+    height: 485px;
+
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-position: bottom -199px center;
+  }
+
+  .static-map::before {
+    bottom: 199px;
+  }
+}
