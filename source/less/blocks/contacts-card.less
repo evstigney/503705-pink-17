@@ -1,32 +1,50 @@
-@bg-color: @bg-white;
-
 .contacts-card {
+  .center-100vw;
+
   position: relative;
 
-  background-color: @bg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 320px;
 }
 
 .contacts-card::before,
 .contacts-card::after {
-  position: absolute;
-  bottom: -36px;
+  .pseudo-absolute;
+
+  top: 100%;
+  left: auto;
   z-index: 2;
 
-  display: block;
   width: 50%;
-  height: 36px;
+  height: 48px;
 
-  content: "";
+  background-color: red;
 }
 
 .contacts-card::before {
+  .bg-diagonal(@bg-white, transparent);
+
   left: 0;
 
-  background: linear-gradient(to left bottom, @bg-color 50%, transparent 50%);
+  transform: scale(-1, 1);
 }
 
 .contacts-card::after {
+  .bg-diagonal(@bg-white, transparent);
   right: 0;
+}
 
-  background: linear-gradient(to right bottom, @bg-color 50%, transparent 50%);
+.contacts-card > * {
+  width: 320px;
+}
+
+.contacts-card__slogan {
+  margin-bottom: 33px;
+}
+
+.contacts-card__item {
+  margin-bottom: 25px;
 }
