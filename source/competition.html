@@ -46,16 +46,16 @@
         </p>
       </div>
       <form class="competition-form competition-main__form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form-group competition-form__group">
-          <legend class="visually-hidden">Введите Ваше ФИО:</legend>
+        <div class="form-group competition-form__group competition-form__group--username">
+          <p class="visually-hidden">Ваше ФИО:</p>
           <label class="form-header field-label competition-form__field-label" for="surname-field">Фамилия:</label>
           <input class="form-field text-input competition-form__text-input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
           <label class="form-header field-label competition-form__field-label" for="name-field">Имя:</label>
           <input class="form-field text-input competition-form__text-input" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" required>
           <label class="form-header field-label competition-form__field-label" for="patronymic-field">Отчество:</label>
           <input class="form-field text-input competition-form__text-input" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
-        </fieldset>
-        <fieldset class="form-group form-group--grey competition-form__group">
+        </div>
+        <fieldset class="form-group form-group--grey form-group--border competition-form__group">
           <legend class="form-header form-group__header competition-form__group-header">Ваши безбашенные достижения в путешествии</legend>
           <input class="box-input competition-form__box-input" type="checkbox" name="shark" id="shark-checkbox" checked>
           <label class="box-input-label box-input-label--checkbox box-label competition-form__box-label" for="shark-checkbox">Сделал селфи с акулой</label>
@@ -70,14 +70,14 @@
           <input class="box-input competition-form__box-input" type="checkbox" name="trashedTheHotel" id="trashedTheHotel-checkbox">
           <label class="box-input-label box-input-label--checkbox box-label competition-form__box-label" for="trashedTheHotel-checkbox">Разгромил отель</label>
         </fieldset>
-        <fieldset class="form-group competition-form__group">
-          <legend class="visually-hidden">Введите ваши контакты:</legend>
+        <div class="form-group  form-group--border competition-form__group competition-form__group--contacts">
+          <p class="form-header form-group__header competition-form__group-header">Контактная информация</p>
           <label class="form-header field-label competition-form__field-label" for="phone-field">Номер телефона</label>
           <input class="form-field text-input competition-form__text-input" type="tel" name="phone" id="phone-field" placeholder="Номер, пожалуйста">
           <label class="form-header field-label competition-form__field-label" for="email-field">Адрес почты</label>
           <input class="form-field text-input competition-form__text-input" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
-        </fieldset>
-        <fieldset class="form-group form-group--grey competition-form__group">
+        </div>
+        <fieldset class="form-group form-group--grey form-group--border competition-form__group competition-form__group--apps">
           <legend class="form-header form-group__header competition-form__group-header">С каким приложением путешествовали?</legend>
           <input class="box-input competition-form__box-input" type="radio" name="app" id="app-ios-radio" value="app-ios" checked>
           <label class="box-input-label box-input-label--radio box-label competition-form__box-label" for="app-ios-radio">Pink для iOS</label>
@@ -86,7 +86,7 @@
           <input class="box-input competition-form__box-input" type="radio" name="app" id="app-windows-radio" value="app-windows">
           <label class="box-input-label box-input-label--radio box-label competition-form__box-label" for="app-windows-radio">Windows Phone</label>
         </fieldset>
-        <fieldset class="form-group competition-form__group">
+        <fieldset class="form-group  form-group--border competition-form__group">
           <legend class="form-header form-group__header competition-form__group-header">Опишите свои эмоции</legend>
           <textarea class="form-field competition-form__text-input" rows="5" name="photo-review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>

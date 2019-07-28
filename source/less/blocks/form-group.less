@@ -47,3 +47,38 @@
   margin-bottom: 17px;
   padding-top: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .form-group--border {
+    position: relative;
+
+    width: 620px;
+
+    border: 2px solid #e5e5e5;
+  }
+
+  .form-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .form-group--grey::before {
+    width: 100%;
+
+    background-color: @bg-white;
+  }
+
+  .form-group__header {
+    .center-100vw;
+
+    top: -11px;
+    z-index: 2;
+
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+    background-color: @bg-white;
+  }
+}

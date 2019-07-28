@@ -47,3 +47,31 @@
 .competition-form__note-star {
   color: @font-red;
 }
+
+@media (min-width: @tablet-width) {
+  .competition-form > * {
+    order: 3;
+    width: @tablet-width;
+  }
+
+  .competition-form__group--username {
+    order: -1;
+  }
+
+  .competition-form__group--apps {
+    order: 1;
+  }
+
+  .competition-form__group--contacts {
+    order: 2;
+  }
+
+  .competition-form__field-label {
+    padding-left: 0;
+    padding-right: 23px;
+  }
+
+  .competition-form__text-input {
+    width: auto;
+  }
+}
