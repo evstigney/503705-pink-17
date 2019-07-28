@@ -3,9 +3,47 @@
 
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
   color: @font-dark;
   font-size: 18px;
   line-height: 30px;
 
   background-color: @bg-white;
+}
+
+.competition-form__field-label {
+  display: block;
+  margin-bottom: 11px;
+  padding-left: 25px;
+}
+
+.competition-form > * {
+  width: @mobile-width;
+  box-sizing: border-box;
+}
+
+.competition-form__text-input {
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.competition-form__button-submit.button-submit {
+  margin-bottom: 35px;
+}
+
+.competition-form__note {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.competition-form__note-star {
+  color: @font-red;
 }

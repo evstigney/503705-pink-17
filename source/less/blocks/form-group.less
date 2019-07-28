@@ -1,21 +1,49 @@
 .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   margin: 0;
   padding: 0;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   border: none;
 }
 
 .form-group--grey {
+  position: relative;
+
+  margin-bottom: 38px;
+  padding-bottom: 11px;
+
+  background-color: @bg-light-grey;
+}
+
+.form-group--grey::before {
+  .pseudo-absolute;
+  .center-100vw;
+
   background-color: @bg-light-grey;
 }
 
 .form-group__header {
+  position: relative;
+
   display: block;
-  width: 100%;
+  width: 225px;
   margin: 0;
+  margin-bottom: 23px;
   padding: 0;
+  padding-top: 39px;
 
   text-align: center;
 
   background-color: inherit;
+}
+
+.form-group:last-of-type .form-group__header {
+  margin-bottom: 17px;
+  padding-top: 0;
 }
