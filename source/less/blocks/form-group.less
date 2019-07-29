@@ -49,18 +49,23 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-group--border {
-    position: relative;
-
-    width: 620px;
-
-    border: 2px solid #e5e5e5;
-  }
-
   .form-group {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+    padding-bottom: 15px;
+  }
+
+  .form-group--border {
+    position: relative;
+
+    width: 620px;
+    margin-bottom: 68px;
+    padding-top: 37px;
+    padding-bottom: 22px;
+    padding-left: 57px;
+
+    border: 2px solid #e5e5e5;
   }
 
   .form-group--grey::before {
@@ -78,7 +83,18 @@
     width: auto;
     margin: 0;
     padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    white-space: nowrap;
 
     background-color: @bg-white;
+  }
+
+  .form-group--contacts {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 43px;
+    padding-bottom: 0;
   }
 }

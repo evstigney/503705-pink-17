@@ -49,6 +49,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .competition-form {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .competition-form > * {
     order: 3;
     width: @tablet-width;
@@ -62,8 +68,18 @@
     order: 1;
   }
 
-  .competition-form__group--contacts {
+  .competition-form__group--contacts.form-group--border {
     order: 2;
+    margin-bottom: 61px;
+  }
+
+  .competition-form__group--progress.form-group--border {
+    padding-bottom: 17px;
+  }
+
+  .competition-form__group--review.form-group--border {
+    margin-bottom: 66px;
+    padding-top: 43px;
   }
 
   .competition-form__field-label {
@@ -73,5 +89,37 @@
 
   .competition-form__text-input {
     width: auto;
+  }
+
+  .competition-form__field-label--tel {
+    order: 2;
+  }
+
+  .competition-form__text-input--email {
+    order: 3;
+  }
+
+  .competition-form__field-label--email {
+    order: 4;
+    margin-bottom: 30px;
+  }
+
+  .competition-form__group--contacts .competition-form__text-input {
+    margin-bottom: 17px;
+  }
+
+  .competition-form__group--contacts .competition-form__field-label {
+    margin-bottom: 34px;
+    margin-left: 22px;
+  }
+
+  .competition-form__button-submit {
+    margin-right: 140px;
+  }
+
+  .competition-form__note {
+    align-self: baseline;
+    width: auto;
+    margin-top: 20px;
   }
 }
