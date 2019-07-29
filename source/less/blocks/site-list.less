@@ -87,4 +87,16 @@
   .main-nav__list-item:last-of-type .site-list__item {
     border-bottom: none;
   }
+
+  .site-list__item--active::before {
+    .pseudo-absolute;
+
+    top: auto;
+    bottom: 3px;
+
+    width: calc(100% + 3px);
+    height: 2px;
+
+    background-color: @bg-white;
+  }
 }

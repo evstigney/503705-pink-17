@@ -47,19 +47,34 @@
   }
 
   .form-field--tel {
+    padding-right: 74px;
+
     background:
       url("../img/icon-phone.svg") no-repeat center right 18px,
-      linear-gradient(to right, @bg-white 438px, #e5e5e5 438px);
+      linear-gradient(to left, #e5e5e5 60px, @bg-white 60px);
   }
 
   .form-field--email {
+    padding-right: 74px;
+
     background:
       url("../img/icon-mail.svg") no-repeat center right 19px,
-      linear-gradient(to right, @bg-white 438px, #e5e5e5 438px);
+      linear-gradient(to left, #e5e5e5 60px, @bg-white 60px);
   }
 
   .form-field--review {
     margin-bottom: 29px;
     padding-bottom: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-field {
+    min-width: 300px;
+  }
+
+  .form-field--tel,
+  .form-field--email {
+    min-width: 375px;
   }
 }

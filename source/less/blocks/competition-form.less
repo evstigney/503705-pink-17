@@ -123,3 +123,32 @@
     margin-top: 20px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .competition-form {
+    position: relative;
+
+    justify-content: space-between;
+    width: 942px;
+  }
+
+  .competition-form::before {
+    .pseudo-absolute;
+    .center-100vw;
+
+    background-color: @bg-white;
+  }
+
+  .competition-form > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .competition-form__group--apps.form-group--border {
+    margin-bottom: 65px;
+  }
+
+  .competition-form__group--contacts.form-group--border {
+    margin-bottom: 67px;
+  }
+}
