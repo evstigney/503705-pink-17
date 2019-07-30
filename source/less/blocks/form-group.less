@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
-  margin: 0;
+  align-items: center;
+  width: @mobile-width;
   padding: 0;
   padding-bottom: 18px;
   padding-left: 20px;
@@ -12,11 +12,23 @@
   border: none;
 }
 
+.form-group--progress {
+  align-items: flex-start;
+}
+
+.form-group--progress .form-group__header {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
 .form-group--grey {
   position: relative;
 
-  margin-bottom: 38px;
-  padding-bottom: 11px;
+  padding-bottom: 13px;
 
   background-color: @bg-light-grey;
 }
@@ -38,14 +50,38 @@
   padding: 0;
   padding-top: 39px;
 
+  color: @font-red;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
   text-align: center;
 
   background-color: inherit;
 }
 
-.form-group:last-of-type .form-group__header {
-  margin-bottom: 17px;
+.form-group--review .form-group__header {
   padding-top: 0;
+}
+
+.form-group__wrapper {
+  width: 100%;
+}
+
+.form-group--apps {
+  padding-bottom: 18px;
+}
+
+.form-group--apps .form-group__header {
+  padding-top: 38px;
+}
+
+.form-group--contacts {
+  padding-top: 39px;
+}
+
+.form-group--contacts .field-label {
+  padding-left: 24px;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,14 +89,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+    width: 620px;
     padding-bottom: 15px;
+  }
+
+  .form-group__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .form-group--border {
     position: relative;
 
     width: 620px;
-    margin-bottom: 68px;
     padding-top: 37px;
     padding-bottom: 22px;
     padding-left: 57px;
@@ -77,7 +118,6 @@
   .form-group__header {
     .center-100vw;
 
-    top: -11px;
     z-index: 2;
 
     width: auto;
@@ -91,11 +131,27 @@
     background-color: @bg-white;
   }
 
+  .form-group--username {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-group--apps {
+    padding-bottom: 32px;
+  }
+
   .form-group--contacts {
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 43px;
+    padding-top: 44px;
     padding-bottom: 0;
+    padding-right: 58px;
+  }
+
+  .form-group--progress {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 22px;
   }
 }
 
@@ -105,25 +161,39 @@
     padding-left: 0;
   }
 
-  .form-group.competition-form__group--username {
+  .form-group--border {
+    padding-left: 59px;
+    padding-right: 60px;
+  }
+
+  .form-group--username {
+    width: 438px;
     padding-top: 7px;
     padding-right: 0;
   }
 
-  .form-group.competition-form__group--apps {
-    padding-top: 39px;
-    padding-bottom: 25px;
+  .form-group--apps {
+    padding-top: 59px;
+    padding-bottom: 13px;
     padding-left: 74px;
   }
 
   .form-group--contacts {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    height: 160px;
+    min-height: 160px;
     padding-top: 40px;
+  }
+
+  .form-group--contacts .field-label {
+    padding-left: 0;
+  }
+
+  .form-group__wrapper {
+    width: 375px;
   }
 
   .form-group--contacts .competition-form__text-input {
@@ -135,10 +205,30 @@
     margin: 0;
     margin-bottom: 18px;
     margin-left: 21px;
+    margin-right: auto;
   }
 
-  .form-group--border {
+  .form-group--progress {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 61px;
+    padding-bottom: 8px;
     padding-left: 59px;
-    padding-right: 60px;
+    padding-right: 17px;
+  }
+
+  .form-group--progress .box-label {
+    margin-bottom: 45px;
+  }
+
+  .form-group--review {
+    width: 100%;
+  }
+
+  .form-field.form-field--review {
+    padding-top: 11px;
   }
 }
