@@ -31,12 +31,16 @@
         </ul>
       </nav>
     </header>
-    <main class="inner-main photogallery-main">
-      <h1 class="banner slogan inner-main__main-header">Фотографии пользователей</h1>
-      <div class="page-description inner-main__main-description">
-        Взгляните на фотогафии, которые выкладывают пользователи! Видите, как не хватает ваших?
+    <main class="inner-main inner-main--photogallery">
+      <h1 class="banner inner-main__main-header">
+        <span class="slogan slogan--white">Фотографии пользователей</span>
+      </h1>
+      <div class="inner-main__main-description">
+        <p class="page-description">
+          Взгляните на фотогафии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?
+        </p>
       </div>
-      <ul class="posts photogallery-main__posts">
+      <ul class="posts inner-main__posts">
         <li class="post post-of-the-day posts__item">
           <h2 class="post-of-the-day__header">Панорама дня</h2>
           <a class="post__image-full" href="img/panorama-full.jpg">
@@ -158,10 +162,12 @@
           </p>
         </li>
       </ul>
-      <div class="page-description photogallery-main__bottom-description">
-        Затмите их всех! Выкладывайте все, что накопилось в телефоне!
+      <div class="inner-main__bottom-description">
+        <p class="page-description">
+          Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!
+        </p>
       </div>
-      <form class="photoeditor photogallery-main__photoeditor" method="post" action="https://echo.htmlacademy.ru">
+      <form class="photoeditor" method="post" action="https://echo.htmlacademy.ru">
         <h2 class="visually-hidden">Редактор ваших фотографий</h2>
         <a class="photoeditor__image-full" href="img/photo7-full.jpg">
           <img class="photoeditor__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Зимняя дорога">
@@ -205,9 +211,9 @@
         <button class="button button--cancel photoeditor__button" type="button">Отмена</button>
       </form>
     </main>
-    <footer class="page-footer inner-footer">
-      <a class="page-footer__logo-big" href="index.html">
-        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="140" alt="Логотип фотоприложения Pink">
+    <footer class="page-footer page-footer--inner">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип фотоприложения Pink">
       </a>
       <ul class="icon-list social-list page-footer__social-list">
         <li class="page-footer__social-list-item">
@@ -229,7 +235,7 @@
       <div class="dev-info page-footer__dev-info">
         Разработано
         <a class="dev-info__icon" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="dev-info__icon-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          <img class="dev-info__icon-img" src="img/htmlacademy.svg" width="39" height="43" alt="HTML Academy">
         </a>
       </div>
     </footer>

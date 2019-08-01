@@ -1,18 +1,27 @@
 .post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 279px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding: 0;
+  padding-bottom: 20px;
 
   background-color: @bg-light-grey;
 }
 
 .post__image-full {
+  margin-bottom: 19px;
   font-size: 0;
   line-height: 0;
 }
 
 .post__author {
   margin: 0;
+  margin-left: 18px;
+  margin-right: auto;
   padding: 0;
 }
 
@@ -22,16 +31,25 @@
   text-transform: uppercase;
 }
 
-.post-description {
+.post__description {
   margin: 0;
+  margin-bottom: 9px;
+  margin-left: 17px;
+  margin-right: auto;
   padding: 0;
 }
 
 .post__likes {
   margin: 0;
+  margin-left: 17px;
+  margin-right: auto;
   padding: 0;
 
   color: @font-red;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.post__likes-like {
+  margin-right: 16px;
 }
