@@ -4,6 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   width: 279px;
+  min-height: 434px;
   margin: 0;
   margin-bottom: 19px;
   padding: 0;
@@ -52,4 +53,80 @@
 
 .post__likes-like {
   margin-right: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .post {
+    width: 300px;
+    margin-bottom: 22px;
+  }
+
+  .post__image-full {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 24px;
+
+    background-color: @bg-light-grey;
+  }
+
+  .post__description {
+    width: 250px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+    margin-right: auto;
+  }
+
+  .post__likes {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 84%;
+    margin-top: auto;
+    margin-left: 33px;
+  }
+
+  .post__likes-total {
+    margin-right: auto;
+  }
+
+  .post-of-the-day .post__image-full {
+    width: @tablet-width;
+    height: 509px;
+    background-color: @bg-light-grey;
+  }
+
+  .post-of-the-day {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 620px;
+    margin-bottom: 50px;
+    padding-bottom: 12px;
+  }
+
+  .post__author {
+    margin-left: 27px;
+  }
+
+  .post-of-the-day .post__description {
+    order: 2;
+    width: auto;
+    margin-left: 27px;
+    margin-right: 23px;
+  }
+
+  .post-of-the-day .post__likes {
+    width: auto;
+    margin-right: 12px;
+    margin-left: auto;
+  }
+
+  .post-of-the-day .post__likes-total {
+    margin-right: 18px;
+  }
 }

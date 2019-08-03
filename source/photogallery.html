@@ -9,7 +9,11 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo page-header__logo--small" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип фотоприложения Pink">
+        <picture>
+          <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+          <img src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Pink">
+        </picture>
       </a>
       <button class="page-header__menu-toggle page-header__menu-toggle--visible" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -37,7 +41,7 @@
       </h1>
       <div class="inner-main__main-description">
         <p class="page-description">
-          Взгляните на фотогафии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?
+          Взгляните на фотогафии, которые выкладывают пользователи! Видите,&nbsp;как не хватает ваших?
         </p>
       </div>
       <ul class="posts inner-main__posts">
