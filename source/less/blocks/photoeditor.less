@@ -93,7 +93,7 @@
     width: 300px;
     height: 400px;
 
-    background-color: red;
+    background-color: @bg-light-grey;
   }
 
   .photoeditor__tool-scale {
@@ -110,5 +110,63 @@
 
   .photoeditor__button.button--upload {
     margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photoeditor {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 52px;
+    padding-bottom: 47px;
+    padding-right: 38px;
+    box-sizing: border-box;
+  }
+
+  .photoeditor__image-full {
+    left: 81px;
+
+    background-color: @bg-light-grey;
+  }
+
+  .photoeditor__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 87px;
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  .photoeditor__list-item:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  .photoeditor__list-item:not(:first-of-type) {
+    margin-top: 12px;
+  }
+
+  .photoeditor__list-item {
+    width: 414px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .photoeditor__button {
+    width: 183px;
+  }
+
+  .photoeditor__button.button--cancel {
+    margin-right: 22px;
+  }
+
+  .photoeditor__button.button--upload {
+    margin-bottom: 0;
+    margin-right: 44px;
   }
 }

@@ -136,3 +136,45 @@
     left: 96px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .tool {
+    min-height: 59px;
+    height: auto;
+  }
+
+  .tool__label {
+    width: 48px;
+    height: 48px;
+    margin-right: 69px;
+  }
+
+  .tool__label::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tool__scale {
+    width: 290px;
+    margin-top: 23px;
+  }
+
+  .tool__label--contrast::before {
+    top: 6px;
+
+    width: 33px;
+    height: 33px;
+  }
+
+  .tool__scale--crop .tool__scale-control {
+    left: 72px;
+  }
+
+  .tool__scale--fill .tool__scale-control {
+    left: 248px;
+  }
+
+  .tool__scale--contrast .tool__scale-control {
+    left: 162px;
+  }
+}
