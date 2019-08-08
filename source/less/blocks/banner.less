@@ -1,16 +1,112 @@
 .banner {
-  line-height: 0;
+  position: relative;
 
-  background-color: @bg-grey;
-  .bg-banner-mobile;
-}
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 85px;
 
-.banner .banner__slogan {
   color: @font-white;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 200;
+  text-align: center;
 
   background-color: @bg-grey;
 }
 
-.index-main .banner__slogan {
-  .visually-hidden;
+.banner::before {
+  .pseudo-absolute;
+  .center-100vw;
+
+  background-color: @bg-grey;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.banner__picture {
+  position: relative;
+
+  line-height: 0;
+}
+
+.banner__slogan {
+  position: relative;
+
+  width: 274px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 26px;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 200;
+
+    background-color: transparent;
+  }
+
+  .banner::before {
+    display: none;
+  }
+
+  .inner-main__main-header.banner::before {
+    display: block;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: bottom 86% center;
+  }
+
+  .banner__slogan {
+    width: 216px;
+    margin-right: 350px;
+    padding-top: 71px;
+    padding-left: 62px;
+  }
+
+  .banner__picture {
+    position: absolute;
+    top: 137px;
+    left: -21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    padding-left: 161px;
+    background: none;
+  }
+
+  .banner__slogan {
+    width: 238px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 200;
+  }
+
+  .banner__picture {
+    position: absolute;
+    top: 99px;
+    left: 145px;
+  }
+
+  .inner-main__main-header.banner::before {
+    /*display: none;*/
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: bottom 81% center;
+  }
+
+  .inner-main__main-header.banner {
+    padding-left: 0;
+  }
 }

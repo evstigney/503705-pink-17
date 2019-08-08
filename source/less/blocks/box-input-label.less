@@ -3,20 +3,16 @@
 }
 
 .box-input-label::before {
-  position: absolute;
-  top: -5px;
-  left: -34px;
+  .pseudo-absolute;
 
-  display: block;
-  width: 42px;
-  height: 42px;
-  box-sizing: border-box;
+  top: -5px;
+  left: 0;
+
+  width: 40px;
+  height: 40px;
 
   background-color: @bg-white;
   border: 2px solid #e5e5e5;
-
-
-  content: "";
 }
 
 .box-input-label--radio::before {
@@ -33,9 +29,9 @@
 }
 
 .box-input-label--checkbox::after {
-  position: absolute;
-  top: 0;
-  left: -15px;
+  .pseudo-absolute;
+
+  left: 17px;
 
   display: none;
   width: 8px;
@@ -45,8 +41,6 @@
   box-shadow: 2px 2px 0 0 @font-red;
 
   transform: rotate(43deg);
-
-  content: "";
 }
 
 .box-input:checked + .box-input-label--checkbox::after {
@@ -56,4 +50,14 @@
 .box-input:checked + .box-input-label--radio::before {
   background-color: @font-red;
   box-shadow: inset 0 0 0 11px @bg-white;
+}
+
+@media (min-width: @desktop-width) {
+  label[for="shark-checkbox"] {
+    margin-right: 20px;
+  }
+
+  label[for="sunburned-checkbox"] {
+    margin-right: 20px;
+  }
 }

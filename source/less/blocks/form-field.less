@@ -1,4 +1,8 @@
 .form-field {
+  padding-top: 15px;
+  padding-bottom: 14px;
+  padding-left: 21px;
+  padding-right: 15px;
   box-sizing: border-box;
 
   color: @font-dark;
@@ -8,12 +12,20 @@
 
   background-color: @bg-white;
   border: 2px solid #e5e5e5;
+  border-radius: 3px;
+}
+
+.form-field--review {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .form-field::placeholder {
   color: @font-dark;
-  font-size: inherit;
-  line-height: inherit;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
 }
 
 .form-field:hover {
@@ -25,4 +37,50 @@
   border: 2px solid @font-red;
 
   outline: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form-field {
+    flex-grow: 1;
+    min-width: 500px;
+    margin-bottom: 52px;
+  }
+
+  .form-field--tel {
+    padding-right: 74px;
+
+    background:
+      url("../img/icon-phone.svg") no-repeat center right 18px,
+      linear-gradient(to left, #e5e5e5 60px, @bg-white 60px);
+  }
+
+  .form-field--email {
+    padding-right: 74px;
+
+    background:
+      url("../img/icon-mail.svg") no-repeat center right 19px,
+      linear-gradient(to left, #e5e5e5 60px, @bg-white 60px);
+  }
+
+  .form-field--review {
+    margin-bottom: 29px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-field {
+    min-width: 300px;
+  }
+
+  .form-field--tel,
+  .form-field--email {
+    width: 375px;
+  }
+
+  .form-field--review {
+    width: 100%;
+    height: 126px;
+    margin-bottom: 21px;
+  }
 }

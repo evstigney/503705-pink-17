@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Конкурс от Pink</title>
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo page-header__logo--small" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип фотоприложения Pink">
+      <a class="page-header__logo page-header__logo--small">
+        <picture>
+          <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+          <img src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Pink">
+        </picture>
       </a>
       <button class="page-header__menu-toggle page-header__menu-toggle--visible" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -31,23 +36,28 @@
         </ul>
       </nav>
     </header>
-    <main class="inner-main competition-main">
-      <h1 class="banner slogan inner-main__main-header">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      <div class="page-description inner-main__main-description">
-        Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+    <main class="inner-main">
+      <h1 class="banner inner-main__main-header">
+        <span class="slogan slogan--white">Конкурс на самое безбашенное путешествие с Пинк</span>
+      </h1>
+      <div class="inner-main__main-description">
+        <p class="page-description">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span class="page-description__el">Пожалуйста, заполните форму ниже:</span>
+        </p>
       </div>
-      <form class="competition-form competition-main__form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form-group competition-form__group">
-          <legend class="visually-hidden">Введите Ваше ФИО:</legend>
-          <label class="form-header field-label competition-form__field-label" for="surname-field">Фамилия:</label>
-          <input class="form-field text-input competition-form__text-input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
-          <label class="form-header field-label competition-form__field-label" for="name-field">Имя:</label>
-          <input class="form-field text-input competition-form__text-input" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" required>
-          <label class="form-header field-label competition-form__field-label" for="patronymic-field">Отчество:</label>
-          <input class="form-field text-input competition-form__text-input" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
-        </fieldset>
-        <fieldset class="form-group form-group--grey competition-form__group">
-          <legend class="form-header form-group__header competition-form__group-header">Ваши безбашенные достижения в путешествии</legend>
+      <form class="competition-form" method="post" action="https://echo.htmlacademy.ru">
+        <div class="form-group form-group--username competition-form__group competition-form__group--username">
+          <p class="visually-hidden">Ваше ФИО:</p>
+          <label class="field-label competition-form__field-label" for="surname-field">Фамилия:</label>
+          <input class="form-field competition-form__text-input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *" required>
+          <label class="field-label competition-form__field-label" for="name-field">Имя:</label>
+          <input class="form-field competition-form__text-input" type="text" name="name" id="name-field" placeholder="Введите ваше имя *" required>
+          <label class="field-label competition-form__field-label" for="patronymic-field">Отчество:</label>
+          <input class="form-field competition-form__text-input" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
+        </div>
+        <div class="form-group  form-group--progress form-group--grey form-group--border competition-form__group competition-form__group--progress">
+          <p class="form-group__header form-group__header competition-form__group-header">Ваши безбашенные достижения в путешествии</p>
           <input class="box-input competition-form__box-input" type="checkbox" name="shark" id="shark-checkbox" checked>
           <label class="box-input-label box-input-label--checkbox box-label competition-form__box-label" for="shark-checkbox">Сделал селфи с акулой</label>
           <input class="box-input competition-form__box-input" type="checkbox" name="sunburned" id="sunburned-checkbox" checked>
@@ -60,16 +70,20 @@
           <label class="box-input-label box-input-label--checkbox box-label competition-form__box-label" for="tower-checkbox">Удержал башню</label>
           <input class="box-input competition-form__box-input" type="checkbox" name="trashedTheHotel" id="trashedTheHotel-checkbox">
           <label class="box-input-label box-input-label--checkbox box-label competition-form__box-label" for="trashedTheHotel-checkbox">Разгромил отель</label>
-        </fieldset>
-        <fieldset class="form-group competition-form__group">
-          <legend class="visually-hidden">Введите ваши контакты:</legend>
-          <label class="form-header field-label competition-form__field-label" for="phone-field">Номер телефона</label>
-          <input class="form-field text-input competition-form__text-input" type="tel" name="phone" id="phone-field" placeholder="Номер, пожалуйста">
-          <label class="form-header field-label competition-form__field-label" for="email-field">Адрес почты</label>
-          <input class="form-field text-input competition-form__text-input" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
-        </fieldset>
-        <fieldset class="form-group form-group--grey competition-form__group">
-          <legend class="form-header form-group__header competition-form__group-header">С каким приложением путешествовали?</legend>
+        </div>
+        <div class="form-group form-group--contacts form-group--border competition-form__group competition-form__group--contacts">
+          <p class="form-group__header competition-form__group-header">Контактная информация</p>
+          <div class="form-group__wrapper">
+            <label class="field-label competition-form__field-label competition-form__field-label--tel" for="phone-field">Номер телефона</label>
+            <input class="form-field form-field--tel competition-form__text-input competition-form__text-input--tel" type="tel" name="phone" id="phone-field" placeholder="Номер, пожалуйста">
+          </div>
+          <div class="form-group__wrapper">
+            <label class="field-label competition-form__field-label competition-form__field-label--email" for="email-field">Адрес почты</label>
+            <input class="form-field form-field--email competition-form__text-input competition-form__text-input--email" type="email" name="email" id="email-field" placeholder="Введите почту *" required>
+          </div>
+        </div>
+        <fieldset class="form-group form-group--apps form-group--grey form-group--border competition-form__group competition-form__group--apps">
+          <p class="form-group__header competition-form__group-header">С каким приложением путешествовали?</p>
           <input class="box-input competition-form__box-input" type="radio" name="app" id="app-ios-radio" value="app-ios" checked>
           <label class="box-input-label box-input-label--radio box-label competition-form__box-label" for="app-ios-radio">Pink для iOS</label>
           <input class="box-input competition-form__box-input" type="radio" name="app" id="app-android-radio" value="app-android">
@@ -77,17 +91,19 @@
           <input class="box-input competition-form__box-input" type="radio" name="app" id="app-windows-radio" value="app-windows">
           <label class="box-input-label box-input-label--radio box-label competition-form__box-label" for="app-windows-radio">Windows Phone</label>
         </fieldset>
-        <label class="form-header field-label competition-form__field-label" for="photo-review-field">Опишите свои эмоции</label>
-        <textarea class="form-field review-text-input competition-form__text-input" rows="6" name="photo-review" id="photo-review-field" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <div class="form-group form-group--review form-group--border competition-form__group competition-form__group--review">
+          <label class="form-group__header competition-form__group-header" for="photo-review-field">Опишите свои эмоции</label>
+          <textarea class="form-field form-field--review competition-form__text-input" rows="5" name="photo-review" id="photo-review-field" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </div>
         <button class="button-submit competition-form__button-submit" type="submit">Отправить форму</button>
-        <p class="form-note competition-form__note">
-          * – обязательные поля
+        <p class="competition-form__note">
+          <span class="competition-form__note-star">*</span> –– обязательные <span class="competition-form__note-hidden">для заполнения</span> поля
         </p>
       </form>
     </main>
-    <footer class="page-footer inner-footer">
-      <a class="page-footer__logo-big" href="index.html">
-        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="140" alt="Логотип фотоприложения Pink">
+    <footer class="page-footer page-footer--inner">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип фотоприложения Pink">
       </a>
       <ul class="icon-list social-list page-footer__social-list">
         <li class="page-footer__social-list-item">
@@ -109,7 +125,7 @@
       <div class="dev-info page-footer__dev-info">
         Разработано
         <a class="dev-info__icon" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="dev-info__icon-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          <img class="dev-info__icon-img" src="img/htmlacademy.svg" width="39" height="43" alt="HTML Academy">
         </a>
       </div>
     </footer>

@@ -1,10 +1,23 @@
 .button-submit {
+  width: 279px;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+
   color: @font-white;
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 
-  background-color: #2aab6d;
+  background-color: @bg-green;
   border: none;
+  border-radius: 4px;
+}
+
+@media (min-width: @tablet-width) {
+  .button-submit {
+    width: 299px;
+  }
 }

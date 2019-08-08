@@ -1,3 +1,46 @@
-.features {
-  background-color: @bg-light-grey;
+.features__slogan {
+  margin-bottom: 26px;
+}
+
+.features__slogan:last-of-type {
+  margin-bottom: 21px;
+}
+
+.features__list {
+  margin-bottom: 42px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    position: relative;
+  }
+
+  .features__slogan:last-of-type {
+    margin-bottom: 33px;
+  }
+
+  .features__list.features-list {
+    margin-bottom: 98px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .features__slogan:last-of-type {
+    margin-bottom: 73px;
+  }
+
+  .features__list.features-list {
+    margin-bottom: 0;
+  }
+
+  .features__scientific {
+    margin-bottom: 74px;
+  }
 }

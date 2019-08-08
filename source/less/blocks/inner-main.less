@@ -1,0 +1,133 @@
+.inner-main {
+  margin-bottom: 55px;
+}
+
+.inner-main--photogallery {
+  margin-bottom: 41px;
+}
+
+.inner-main__main-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding-top: 92px;
+  padding-bottom: 52px;
+}
+
+.inner-main__main-description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 43px;
+  padding-bottom: 41px;
+
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.inner-main__main-header .slogan--white {
+  min-height: 90px;
+}
+
+.inner-main__posts {
+  position: relative;
+  margin-bottom: 23px;
+}
+
+.inner-main__posts::before {
+  .pseudo-absolute;
+  .center-100vw;
+
+  background-color: @bg-white;
+}
+
+.inner-main__bottom-description {
+  margin-bottom: 42px;
+}
+
+.inner-main__posts > * {
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .inner-main {
+    margin-bottom: 52px;
+  }
+
+  .inner-main__main-header {
+    padding-top: 132px;
+    padding-bottom: 81px;
+  }
+
+  .inner-main__main-description {
+    margin-bottom: 0;
+    padding-top: 92px;
+    padding-bottom: 71px;
+  }
+
+  .inner-main--photogallery .inner-main__main-header {
+    padding-bottom: 141px;
+  }
+
+  .inner-main__posts {
+    margin-top: 5px;
+    margin-bottom: 43px;
+  }
+
+  .inner-main__bottom-description .page-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .inner-main__bottom-description {
+    margin-bottom: 67px;
+  }
+
+  .inner-main--photogallery {
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-main__main-header {
+    padding-top: 63px;
+    padding-bottom: 102px;
+  }
+
+  .inner-main__main-description {
+    .center-100vw;
+
+    position: relative;
+
+    padding-bottom: 77px;
+
+    background-color: @bg-white;
+  }
+
+  .inner-main {
+    margin-bottom: 36px;
+  }
+
+  .inner-main--photogallery .inner-main__main-header {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 101px;
+  }
+
+  .inner-main--photogallery .page-description {
+    width: 600px;
+  }
+
+  .inner-main__posts {
+    margin-top: 0;
+    margin-bottom: 6px;
+    padding-top: 11px;
+  }
+
+  .inner-main--photogallery {
+    margin-bottom: 100px;
+  }
+}

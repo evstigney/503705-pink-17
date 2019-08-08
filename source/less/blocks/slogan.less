@@ -11,6 +11,69 @@
   background-color: @bg-white;
 }
 
-.banner.slogan {
+.slogan--white {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 233px;
+
   color: @font-white;
+  background-color: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .slogan.features__slogan {
+    margin-bottom: 0;
+
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .slogan:nth-of-type(2) {
+    width: 354px;
+    padding-left: 153px;
+    padding-right: 153px;
+  }
+
+  .slogan.contacts-card__slogan {
+    min-width: 378px;
+    padding-left: 26%;
+    padding-right: 26%;
+
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .slogan--white {
+    width: 495px;
+
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slogan.features__slogan {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .slogan:nth-of-type(2) {
+    width: 573px;
+  }
+
+  .slogan.contacts-card__slogan {
+    width: 477px;
+
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .slogan--white {
+    width: 799px;
+  }
 }

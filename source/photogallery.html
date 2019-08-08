@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="content-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Фотогаллерея от Pink</title>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo page-header__logo--small" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип фотоприложения Pink">
+        <picture>
+          <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+          <img src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Pink">
+        </picture>
       </a>
       <button class="page-header__menu-toggle page-header__menu-toggle--visible" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -31,12 +36,16 @@
         </ul>
       </nav>
     </header>
-    <main class="inner-main photogallery-main">
-      <h1 class="banner slogan inner-main__main-header">Фотографии пользователей</h1>
-      <div class="page-description inner-main__main-description">
-        Взгляните на фотогафии, которые выкладывают пользователи! Видите, как не хватает ваших?
+    <main class="inner-main inner-main--photogallery">
+      <h1 class="banner inner-main__main-header">
+        <span class="slogan slogan--white">Фотографии пользователей</span>
+      </h1>
+      <div class="inner-main__main-description">
+        <p class="page-description">
+          Взгляните на фотогафии, которые выкладывают пользователи! Видите,&nbsp;как не хватает ваших?
+        </p>
       </div>
-      <ul class="posts photogallery-main__posts">
+      <ul class="posts inner-main__posts">
         <li class="post post-of-the-day posts__item">
           <h2 class="post-of-the-day__header">Панорама дня</h2>
           <a class="post__image-full" href="img/panorama-full.jpg">
@@ -158,10 +167,12 @@
           </p>
         </li>
       </ul>
-      <div class="page-description photogallery-main__bottom-description">
-        Затмите их всех! Выкладывайте все, что накопилось в телефоне!
+      <div class="inner-main__bottom-description">
+        <p class="page-description">
+          Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!
+        </p>
       </div>
-      <form class="photoeditor photogallery-main__photoeditor" method="post" action="https://echo.htmlacademy.ru">
+      <form class="photoeditor" method="post" action="https://echo.htmlacademy.ru">
         <h2 class="visually-hidden">Редактор ваших фотографий</h2>
         <a class="photoeditor__image-full" href="img/photo7-full.jpg">
           <img class="photoeditor__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Зимняя дорога">
@@ -172,7 +183,7 @@
             <label class="box-label tool__label tool__label--crop photoeditor__tool photoeditor__tool--active" for="crop-radio">
               <strong class="visually-hidden">Кадрирование</strong>
             </label>
-            <div class="tool__scale crop-tool-scale photoeditor__tool-scale">
+            <div class="tool__scale tool__scale--crop photoeditor__tool-scale">
               <button class="tool__scale-control" type="button">
                 <span class="visually-hidden">Изменить размер изображения</span>
               </button>
@@ -183,7 +194,7 @@
             <label class="box-label tool__label tool__label--fill photoeditor__tool" for="fill-radio">
               <strong class="visually-hidden">Заливка</strong>
             </label>
-            <div class="tool__scale fill-tool-scale photoeditor__tool-scale">
+            <div class="tool__scale tool__scale--fill photoeditor__tool-scale">
               <button class="tool__scale-control" type="button">
                 <span class="visually-hidden">Изменить интенсивность заливки</span>
               </button>
@@ -194,7 +205,7 @@
             <label class="box-label tool__label tool__label--contrast photoeditor__tool" for="contrast-radio">
               <strong class="visually-hidden">Контастность</strong>
             </label>
-            <div class="tool__scale contrast-tool-scale photoeditor__tool-scale">
+            <div class="tool__scale tool__scale--contrast photoeditor__tool-scale">
               <button class="tool__scale-control" type="button">
                 <span class="visually-hidden">Изменить контрастность</span>
               </button>
@@ -205,9 +216,9 @@
         <button class="button button--cancel photoeditor__button" type="button">Отмена</button>
       </form>
     </main>
-    <footer class="page-footer inner-footer">
-      <a class="page-footer__logo-big" href="index.html">
-        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="140" alt="Логотип фотоприложения Pink">
+    <footer class="page-footer page-footer--inner">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип фотоприложения Pink">
       </a>
       <ul class="icon-list social-list page-footer__social-list">
         <li class="page-footer__social-list-item">
@@ -229,7 +240,7 @@
       <div class="dev-info page-footer__dev-info">
         Разработано
         <a class="dev-info__icon" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="dev-info__icon-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+          <img class="dev-info__icon-img" src="img/htmlacademy.svg" width="39" height="43" alt="HTML Academy">
         </a>
       </div>
     </footer>

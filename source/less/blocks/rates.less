@@ -1,7 +1,32 @@
 .rates {
+  .center-100vw;
+
+  min-width: 320px;
+  padding-top: 49px;
+  padding-bottom: 46px;
+  overflow-x: hidden;
+
   background-color: @bg-light-grey;
 }
 
-.rates::before {
-  .bg-diagonal(@bg-white, @bg-light-grey);
+.rates__table {
+  margin-bottom: 28px;
+}
+
+@media (min-width: @tablet-width) {
+  .rates {
+    padding-top: 26px;
+    padding-bottom: 39px;
+  }
+
+  .rates__slider-bullets {
+    .visually-hidden;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rates {
+    padding-top: 88px;
+    padding-bottom: 66px;
+  }
 }

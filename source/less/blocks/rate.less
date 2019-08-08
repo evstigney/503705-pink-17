@@ -1,7 +1,3 @@
-.rate-border-left {
-  box-shadow: inset 2px 0 0 0 #e5e5e5;
-}
-
 .rate {
   position: relative;
 
@@ -10,29 +6,32 @@
   flex-wrap: nowrap;
   width: 276px;
 
-  background-color: @bg-white;
-  .rate-border-left;
+  box-shadow: inset 2px 0 0 0 #e5e5e5;
 
   overflow: hidden;
 }
 
 .rate__header {
+  padding-top: 16px;
+  padding-bottom: 22px;
+
   color: @font-white;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
 
+  border: none;
   background-color: @bg-grey;
-  .rate-border-left;
+  box-shadow: inset -2px 0 0 0 #e5e5e5;
 }
 
 .rate--hit::before {
-  position: absolute;
-  z-index: 1;
-  top: 9px;
-  left: -44%;
+  .pseudo-absolute;
 
-  display: block;
+  z-index: 1;
+  top: 11px;
+  left: -42%;
+
   width: 100%;
   height: 29px;
 
@@ -61,28 +60,164 @@
 
 .rate__component {
   position: relative;
+
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 23px;
+
+  background-color: @bg-white;
+  border-right: 2px solid #e5e5e5;
 }
 
 .rate__component::before {
-  position: absolute;
-  top: 0;
-  left: 230px;
+  .pseudo-absolute;
 
-  display: block;
+  top: 13px;
+  left: 226px;
+
   width: 36px;
   height: 30px;
 
   background-color: inherit;
   background-position: center;
   background-repeat: no-repeat;
-
-  content: "";
 }
 
 .rate__component--yes::before {
   background-image: url("../img/icon-yes.svg");
+  background-size: 89%;
 }
 
 .rate__component--no::before {
   background-image: url("../img/icon-no.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .rate {
+    width: 155px;
+    box-shadow: none;
+  }
+
+  .rate--hit::before {
+    top: 6px;
+    left: -37%;
+
+    font-size: 16px;
+  }
+
+  .rate:not(:last-of-type) .rate__header {
+    border-right: 2px solid #f2f2f2;
+  }
+
+  .rate__header {
+    padding-top: 11px;
+    padding-bottom: 7px;
+
+    font-size: 16px;
+
+    box-shadow: none;
+  }
+
+  .rate__value {
+    font-size: 18px;
+  }
+
+  .rate__component {
+    height: 44px;
+    padding: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    border-right: 2px solid #e5e5e5;
+  }
+
+  .rate__component--yes {
+    background-image: url("../img/icon-yes.svg");
+    background-size: 32px;
+  }
+
+  .rate__component--no {
+    background-image: url("../img/icon-no.svg");
+  }
+
+  .rate:first-of-type {
+    padding-left: 155px;
+  }
+
+  .rate__component-name {
+    .visually-hidden;
+  }
+
+  .rate__component::before {
+    display: none;
+  }
+
+  .rate:first-of-type .rate__component::before {
+    .pseudo-absolute;
+
+    top: -2px;
+    left: -155px;
+
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    padding-top: 5px;
+    padding-left: 16px;
+
+    color: @font-dark;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: none;
+
+    background-color: @bg-white;
+    background-image: none;
+    border: 2px solid #e5e5e5;
+  }
+
+  .rate:first-of-type .rate__component--pink-filter::before {
+    content: "Розовый фильтр";
+  }
+
+  .rate:first-of-type .rate__component--smiles::before {
+    content: "Смайлики";
+  }
+
+  .rate:first-of-type .rate__component--comments::before {
+    content: "Комментарии";
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rate {
+    width: 235px;
+  }
+
+  .rate__header {
+    padding-top: 17px;
+    padding-bottom: 21px;
+
+    font-size: 18px;
+  }
+
+  .rate__value {
+    font-size: 24px;
+  }
+
+  .rate__component {
+    height: 58px;
+  }
+
+  .rate:first-of-type {
+    padding-left: 235px;
+  }
+
+  .rate:first-of-type .rate__component::before {
+    left: -235px;
+
+    padding-top: 12px;
+    padding-left: 23px;
+
+    font-size: 18px;
+
+    border-right: 2px solid #e5e5e5;
+  }
 }

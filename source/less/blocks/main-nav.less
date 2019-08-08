@@ -1,8 +1,46 @@
 .main-nav {
+  width: 100%;
+
   color: @font-white;
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
 
   background-color: @bg-grey;
+}
+
+.main-nav__list {
+  position: relative;
+}
+
+.main-nav__list-item:last-of-type {
+  position: absolute;
+  top: auto;
+  left: auto;
+  z-index: 2;
+
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list-item:last-of-type {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: auto;
+
+    line-height: 18px;
+    font-weight: 400;
+
+    background-color: transparent;
+  }
+
+  .main-nav__list-item:last-of-type {
+    position: static;
+
+    width: auto;
+  }
 }

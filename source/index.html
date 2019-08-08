@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo page-header__logo--small">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип фотоприложения Pink">
+        <picture>
+          <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+          <img src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Pink">
+        </picture>
       </a>
       <button class="page-header__menu-toggle page-header__menu-toggle--visible" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -36,14 +41,16 @@
       <section class="download-app index-main__download-app">
         <h2 class="visually-hidden">Где скачать Pink</h2>
         <div class="banner download-app__banner">
-          <p class="slogan banner__slogan">
+          <p class="banner__slogan">
             Взгляните на жизнь иначе!
           </p>
-          <img class="banner__picture" src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Фотоприложение Pink раскрасит ваши будни">
+          <picture class="banner__picture">
+            <source srcset="img/iphone-hand-desktop@1x.png" media="(min-width: 1200px)">
+            <source srcset="img/iphone-hand-tablet@1x.png" media="(min-width: 660px)">
+            <img src="img/iphone-hand-mobile@1x.png" alt="Фотоприложение Pink раскрасит ваши будни">
+          </picture>
         </div>
-        <p class="download-app__description">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+        <a class="button button--download download-app__button" href="https://itunes.apple.com">Скачать приложение</a>
         <ul class="icon-list download-list download-app__list">
           <li class="download-app__list-item">
             <a class="download-list__item download-list__item-apple" href="https://itunes.apple.com">
@@ -61,7 +68,9 @@
             </a>
           </li>
         </ul>
-        <a class="button button--download download-app__button" href="https://itunes.apple.com">Скачать приложение</a>
+        <p class="download-app__description">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
       </section>
       <section class="features index-main__features">
         <h2 class="visually-hidden">Преимущества</h2>
@@ -71,27 +80,46 @@
         <p class="slogan features__slogan">
           Нам есть что вам предложить!
         </p>
-        <dl class="content-list features-list features__list">
-          <div class="content-item features-list__item">
-            <dt class="content-item__header features-list__item-header">Поднимает настроение</dt>
-            <dd class="content-item__description features-list__item-description">
-              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-            </dd>
-          </div>
-          <div class="content-item features-list__item">
-            <dt class="content-item__header features-list__item-header">Меняет мир вокруг</dt>
-            <dd class="content-item__description features-list__item-description">
-              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-            </dd>
-          </div>
-          <div class="content-item features-list__item">
-            <dt class="content-item__header features-list__item-header">Заводит новых друзей</dt>
-            <dd class="content-item__description features-list__item-description">
-              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-            </dd>
-          </div>
-        </dl>
-        <img class="features__picture" src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Пример применения фотофильтра от Pink">
+        <ul class="features-list features__list">
+          <li class="features-list__item">
+            <b class="features-list__item-header">Поднимает настроение</b>
+            <p class="features-list__item-description">
+              Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в несколько кликов!
+            </p>
+            <picture class="features-list__item-picture features-list__item-picture--first">
+              <source srcset="img/iphone-screen-1-desktop@1x.png" media="(min-width: 1200px)">
+              <img src="img/iphone-screen-1-tablet@1x.png" alt="Фото без фильтра">
+            </picture>
+          </li>
+          <li class="features-list__item">
+            <b class="features-list__item-header">Меняет мир вокруг</b>
+            <p class="features-list__item-description">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект
+            </p>
+            <picture class="features-list__item-picture features-list__item-picture--second">
+              <source srcset="img/iphone-screen-2-desktop@1x.png" media="(min-width: 1200px)">
+              <img src="img/iphone-screen-2-tablet@1x.png" alt="Пример применения розового фильтра от Pink">
+            </picture>
+          </li>
+          <li class="features-list__item">
+            <b class="features-list__item-header">Заводит новых друзей</b>
+            <p class="features-list__item-description">
+              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и&nbsp;заводите новых
+            </p>
+            <picture class="features-list__item-picture features-list__item-picture--third">
+              <source srcset="img/iphone-screen-3-desktop@1x.png" media="(min-width: 1200px)">
+              <source srcset="img/iphone-screen-3-tablet@1x.png" media="(min-width: 660px)">
+              <img src="img/iphone-screen-mobile@1x.png" alt="Пример применения розового фильтра и смайлика от Pink">
+            </picture>
+          </li>
+        </ul>
+        <div class="scientific features__scientific">
+          <b class="scientific__header">Эффект на&nbsp;24&nbsp;часа!</b>
+          <p class="scientific__description">
+            Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!
+          </p>
+          <a class="scientific__details" href="scientific-research.html">Узнать больше об исследовании</a>
+        </div>
       </section>
       <section class="responses index-main__responses">
         <h2 class="visually-hidden">Отзывы</h2>
@@ -109,17 +137,82 @@
             <span class="visually-hidden">Показать третий отзыв</span>
           </label>
         </div>
-        <div class="content-list responses-list responses__list">
-          <div class="content-item responses-list__item">
-            <p class="content-item__header">Николай Петров</p>
-            <blockquote class="content-item__description">
+        <div class="responses-list responses__list">
+          <a class="slider-arrow slider-arrow--prev responses-list__arrow">
+            <span class="visually-hidden">Показать предыдущий отзыв</span>
+          </a>
+          <div class="responses-list__item">
+            <p class="responses-list__item-header">
+              <b>Николай Петров</b>
+              <span class="responses-list__item-header-info">25 лет, водитель трамвая</span>
+            </p>
+            <blockquote class="responses-list__item-description">
               «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
             </blockquote>
           </div>
+          <a class="slider-arrow slider-arrow--next responses-list__arrow">
+            <span class="visually-hidden">Показать следующий отзыв</span>
+          </a>
         </div>
       </section>
       <section class="rates index-main__rates">
         <h2 class="visually-hidden">Выбор тарифа</h2>
+        <table class="rates-table rates__table">
+          <tr class="rate rates-table__row">
+            <td class="rate__header">
+              <span class="rate__name">База</span>
+              <span class="rate__value">1,99 USD</span>
+            </td>
+            <td class="rate__component rate__component--pink-filter rate__component--yes">
+              <span class="rate__component-name">розовый фильтр</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
+            </td>
+            <td class="rate__component rate__component--smiles rate__component--no">
+              <span class="rate__component-name">смайлики</span>
+              <span class="rate__component-value visually-hidden"> - нет</span>
+            </td>
+            <td class="rate__component rate__component--comments rate__component--no">
+              <span class="rate__component-name">комментарии</span>
+              <span class="rate__component-value visually-hidden"> - нет</span>
+            </td>
+          </tr>
+          <tr class="rate rate--hit rates-table__row">
+            <td class="rate__header rate__header--hit">
+              <span class="rate__name">Стандарт</span>
+              <span class="rate__value">3,99 USD</span>
+            </td>
+            <td class="rate__component rate__component--yes">
+              <span class="rate__component-name">розовый фильтр</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
+            </td>
+            <td class="rate__component rate__component--yes">
+              <span class="rate__component-name">смайлики</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
+            </td>
+            <td class="rate__component rate__component--no">
+              <span class="rate__component-name">комментарии</span>
+              <span class="rate__component-value visually-hidden"> - нет</span>
+            </td>
+          </tr>
+          <tr class="rate rates-table__row">
+            <td class="rate__header">
+              <span class="rate__name">Анлим</span>
+              <span class="rate__value">9,99 USD</span>
+            </td>
+            <td class="rate__component rate__component--yes">
+              <span class="rate__component-name">розовый фильтр</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
+            </td>
+            <td class="rate__component rate__component--yes">
+              <span class="rate__component-name">смайлики</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
+            </td>
+            <td class="rate__component rate__component--yes">
+              <span class="rate__component-name">комментарии</span>
+              <span class="rate__component-value visually-hidden"> - да</span>
+            </td>
+          </tr>
+        </table>
         <div class="slider-bullets rates__slider-bullets">
           <input class="bullet" type="radio" name="rate" id="rate-bullet-first" value="rate-first">
           <label class="bullet-label" for="rate-bullet-first">
@@ -134,69 +227,13 @@
             <span class="visually-hidden">Показать третий тариф</span>
           </label>
         </div>
-        <table class="rates-table rates__table">
-          <tr class="rate rates-table__row">
-            <td class="rate__header">
-              <span class="rate__name">База</span>
-              <span class="rate__value">1,99 USD</span>
-            </td>
-            <td class="rate__component rate__component--yes">
-              розовый фильтр
-              <span class="rate__component-value visually-hidden"> - да</span>
-            </td>
-            <td class="rate__component rate__component--no">
-              смайлики
-              <span class="rate__component-value visually-hidden"> - нет</span>
-            </td>
-            <td class="rate__component rate__component--no">
-              комментарии
-              <span class="rate__component-value visually-hidden"> - нет</span>
-            </td>
-          </tr>
-          <tr class="rate rate--hit rates-table__row">
-            <td class="rate__header rate__header--hit">
-              <span class="rate__name">Стандарт</span>
-              <span class="rate__value">3,99 USD</span>
-            </td>
-            <td class="rate__component rate__component--yes">
-              розовый фильтр
-              <span class="rate__component-value visually-hidden"> - да</span>
-            </td>
-            <td class="rate__component rate__component--yes">
-              смайлики
-              <span class="rate__component-value visually-hidden"> - да</span>
-            </td>
-            <td class="rate__component rate__component--no">
-              комментарии
-              <span class="rate__component-value visually-hidden"> - нет</span>
-            </td>
-          </tr>
-          <tr class="rate rates-table__row">
-            <td class="rate__header">
-              <span class="rate__name">Анлим</span>
-              <span class="rate__value">9,99 USD</span>
-            </td>
-            <td class="rate__component rate__component--yes">
-              розовый фильтр
-              <span class="rate__component-value visually-hidden"> - да</span>
-            </td>
-            <td class="rate__component rate__component--yes">
-              смайлики
-              <span class="rate__component-value visually-hidden"> - да</span>
-            </td>
-            <td class="rate__component rate__component--yes">
-              комментарии
-              <span class="rate__component-value visually-hidden"> - да</span>
-            </td>
-          </tr>
-        </table>
       </section>
       <section class="contacts index-main__contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-card contacts__card">
-          <p class="slogan contacts-card__slogan">
+          <strong class="slogan contacts-card__slogan">
             Остались вопросы? Свяжитесь с нами!
-          </p>
+          </strong>
           <p class="contact contacts-card__item">
             <span class="contact__header">Звоните:</span>
             <span class="contact__value">+7 (812) 555-66-66</span>
@@ -209,12 +246,42 @@
           </p>
           <p class="contact contacts-card__item">
             <span class="contact__header">Приезжайте в гости:</span>
-            <span class="contact__value">ул. Большая Конюшенная, 19/8</span>
+            <span class="contact__value contact__value--address">ул. Большая Конюшенная, 19/8</span>
           </p>
         </div>
         <div class="static-map contacts__map"></div>
         <div class="interactive-map contacts__map" id="map"></div>
       </section>
     </main>
+    <footer class="page-footer page-footer--index-footer">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Логотип фотоприложения Pink">
+      </a>
+      <ul class="icon-list social-list page-footer__social-list">
+        <li class="page-footer__social-list-item">
+          <a class="social-list__item social-list__item--tw" href="https://twitter.com">
+            <span class="visually-hidden">Pink в Twitter</span>
+          </a>
+        </li>
+        <li class="page-footer__social-list-item">
+          <a class="social-list__item social-list__item--fb" href="https://facebook.com">
+            <span class="visually-hidden">Pink в Facebook</span>
+          </a>
+        </li>
+        <li class="page-footer__social-list-item">
+          <a class="social-list__item social-list__item--youtube">
+            <span class="visually-hidden">Pink на YouTube</span>
+          </a>
+        </li>
+      </ul>
+      <div class="dev-info page-footer__dev-info">
+        Разработано
+        <a class="dev-info__icon" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="dev-info__icon-img" src="img/htmlacademy.svg" width="39" height="43" alt="HTML Academy">
+        </a>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1a4gRDY0iZ1WLCSKeqjaCfPm6gDjSukM&callback=initMap"></script>
   </body>
 </html>

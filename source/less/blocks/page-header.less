@@ -1,14 +1,46 @@
 .page-header {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+
   background-color: @bg-grey;
 }
 
+.page-header::before {
+  .pseudo-absolute;
+
+  left: 50%;
+
+  width: 100vw;
+
+  background-color: @font-dark;
+
+  transform: translateX(-50%);
+}
+
+.page-header__logo {
+  z-index: 2;
+
+  width: 100%;
+  margin-left: 20px;
+  margin-bottom: 21px;
+}
+
 .page-header__menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 6px;
+
   width: 50px;
   height: 24px;
   margin: 0;
   padding: 0;
 
-  .bg-burger;
+  background-color: transparent;
+  background-position: top center;
+  background-repeat: no-repeat;
 
   border: none;
 }
@@ -18,7 +50,58 @@
 }
 
 .page-header__menu-toggle--visible {
-  /* поставлю позже, пока под вопросом
-  display: none;
-  */
+  background-image: url("../img/icon-menu-cross.svg");
+}
+
+.page-header__menu-toggle--hidden {
+  background-image: url("../img/icon-menu-burger.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    padding-top: 26px;
+  }
+
+  .page-header__logo {
+    margin-bottom: 37px;
+  }
+
+  .page-header__menu-toggle {
+    top: 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    position: relative;
+
+    background-color: transparent;
+  }
+
+  .page-header::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: block;
+    width: 100vw;
+    height: 100%;
+
+    background-color: fade(#000000, 30%);
+
+    transform: translateX(-50%);
+
+    content: "";
+  }
+
+  .page-header__logo {
+    position: relative;
+
+    width: 158px;
+    margin-left: 131px;
+  }
+
+  .page-header__menu-toggle {
+    display: none;
+  }
 }

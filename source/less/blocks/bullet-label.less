@@ -2,30 +2,29 @@
   position: relative;
 
   margin: 0;
-  margin-right: 1px;
+  margin-right: 13px;
   padding: 0;
 }
 
 .bullet-label::before {
-  position: absolute;
-  bottom: 1px;
+  .pseudo-absolute;
+
+  top: auto;
+  bottom: 2px;
   left: -12px;
 
-  display: block;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 
 
   background-color: #bec2c7;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px @bg-white;
-
-  content: "";
+  box-shadow: 0 0 0 5px @bg-white;
 }
 
 .rates .bullet-label::before {
-  box-shadow: 0 0 0 3px @bg-light-grey;
+  box-shadow: 0 0 0 5px @bg-light-grey;
 }
 
 .bullet-label:hover::before {

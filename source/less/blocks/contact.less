@@ -1,4 +1,8 @@
 .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0;
   padding: 0;
 
@@ -7,7 +11,7 @@
 }
 
 .contact__header {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .contact__value {
@@ -15,6 +19,7 @@
 
   color: @font-red;
   font-size: 24px;
+  line-height: 29px;
 }
 
 .contact__value-mail {
@@ -27,4 +32,20 @@
 
 .contact__value-mail:active {
   color: fade(@font-dark, 30%);
+}
+
+.contact__value--address {
+  width: 215px;
+}
+
+@media (min-width: @tablet-width) {
+  .contact__value {
+    margin-top: 7px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact__value {
+    margin-top: 25px;
+  }
 }

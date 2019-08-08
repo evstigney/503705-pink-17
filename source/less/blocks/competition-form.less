@@ -1,7 +1,261 @@
 .competition-form {
+  .center-100vw;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
   color: @font-dark;
   font-size: 18px;
   line-height: 30px;
 
   background-color: @bg-white;
+}
+
+.competition-form__group {
+  margin: 0;
+}
+
+.competition-form > * {
+  box-sizing: border-box;
+}
+
+.competition-form__field-label {
+  display: block;
+  margin-bottom: 11px;
+  padding-left: 25px;
+}
+
+.competition-form__group--username .competition-form__field-label {
+  width: 100%;
+  padding-left: 48px;
+
+  text-align: left;
+}
+
+.competition-form__group--review {
+  padding-top: 38px;
+}
+
+.competition-form__text-input {
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.competition-form__button-submit.button-submit {
+  margin-bottom: 35px;
+}
+
+.competition-form__note {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.competition-form__note-star {
+  color: @font-red;
+}
+
+.competition-form__group--progress .competition-form__group-header {
+  margin-bottom: 25px;
+}
+
+.competition-form__group--progress .competition-form__box-label {
+  margin-bottom: 27px;
+}
+
+.competition-form__group--apps .competition-form__box-label {
+  margin-bottom: 21px;
+}
+
+.competition-form__group--review .competition-form__group-header {
+  margin-bottom: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .competition-form {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .competition-form > * {
+    order: 3;
+  }
+
+  .competition-form__group--username {
+    order: -1;
+  }
+
+  .competition-form__group--username .competition-form__field-label {
+    width: auto;
+    margin-right: 22px;
+    padding: 0;
+  }
+
+  .competition-form__group--apps .competition-form__group-header {
+    top: -49px;
+  }
+
+  .competition-form__group--apps {
+    order: 1;
+    margin-bottom: 65px;
+  }
+
+  .competition-form__group--contacts .competition-form__group-header {
+    top: -10px;
+  }
+
+  .competition-form__group--contacts.form-group--border {
+    order: 2;
+    margin-bottom: 61px;
+  }
+
+  .competition-form__group--contacts .competition-form__text-input {
+    margin-bottom: 17px;
+  }
+
+  .competition-form__group--contacts .competition-form__field-label {
+    margin-bottom: 34px;
+  }
+
+  .competition-form__group--progress .competition-form__group-header {
+    top: -8px;
+
+    width: auto;
+  }
+
+  .competition-form__group--progress {
+    margin-bottom: 65px;
+  }
+
+  .competition-form__group--review {
+    margin-bottom: 69px;
+    padding-top: 43px;
+    padding-right: 58px;
+  }
+
+  .competition-form__group--review .competition-form__group-header {
+    top: -10px;
+  }
+
+  .competition-form__text-input {
+    width: auto;
+  }
+
+  .competition-form__field-label--email {
+    margin-bottom: 30px;
+  }
+
+  .competition-form__button-submit {
+    margin-right: 140px;
+  }
+
+  .competition-form__note {
+    align-self: baseline;
+    width: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .competition-form {
+    position: relative;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 942px;
+  }
+
+  .competition-form::before {
+    .pseudo-absolute;
+    .center-100vw;
+
+    background-color: @bg-white;
+  }
+
+  .competition-form > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .competition-form__group--apps {
+    margin-bottom: 0;
+  }
+
+  .competition-form__group--apps .box-label {
+    margin-bottom: 38px;
+  }
+
+  .competition-form__group--contacts {
+    margin-bottom: 67px;
+  }
+
+  .competition-form__group--contacts .competition-form__field-label {
+    margin-bottom: 19px;
+  }
+
+  .competition-form__field-label--tel {
+    margin-right: 69px;
+  }
+
+  .competition-form__box-input {
+    position: absolute;
+    top: 0;
+    left: -5000px;
+    z-index: 0;
+  }
+
+  .competition-form__group--progress.form-group-border {
+    margin-bottom: 65px;
+  }
+
+  .competition-form__group--progress > * {
+    order: 2;
+    width: 191px;
+    margin-bottom: 0;
+  }
+
+  .competition-form__group--progress .competition-form__box-label {
+    margin-bottom: 45px;
+  }
+
+  .competition-form__group--progress .competition-form__box-label:first-of-type {
+    order: -1;
+  }
+
+  .competition-form__group--progress .competition-form__box-label:nth-of-type(3),
+  .competition-form__group--progress .competition-form__box-label:nth-of-type(5) {
+    order: 1;
+  }
+
+  .competition-form__group--progress {
+    margin-bottom: 66px;
+  }
+
+  .competition-form__group--review {
+    margin-bottom: 64px;
+  }
+
+  .competition-form__note {
+    margin-top: 17px;
+  }
+}
+
+@media (max-width: @desktop-width) {
+  .competition-form__note-hidden {
+    .visually-hidden;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .competition-form__group--contacts .competition-form__group-header {
+    .visually-hidden;
+  }
 }

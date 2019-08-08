@@ -1,3 +1,72 @@
 .responses {
+  .center-100vw;
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 320px;
+  padding-top: 42px;
+
+  line-height: 30px;
   background-color: @bg-white;
+}
+
+.responses::before {
+  .pseudo-absolute;
+  .center-100vw;
+  .bg-diagonal(@bg-white, @bg-light-grey);
+
+  top: 110%;
+
+  min-width: 320px;
+  height: 37px;
+}
+
+.responses::after {
+  .pseudo-absolute;
+  .center-100vw;
+
+  top: calc(100% + 68px);
+
+  min-width: 320px;
+  height: 9px;
+
+  background-color: @bg-light-grey;
+}
+
+.responses__list {
+  margin-bottom: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .responses {
+    padding-top: 39px;
+  }
+
+  .responses::before {
+    top: 103%;
+
+    height: 70px;
+  }
+
+  .responses::after {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .responses {
+    padding-top: 112px;
+  }
+
+  .responses::before {
+    top: 100%;
+
+    height: 116px;
+  }
+
+  .responses__slider-bullets {
+    .visually-hidden;
+  }
 }

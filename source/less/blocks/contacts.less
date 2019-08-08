@@ -1,0 +1,30 @@
+.contacts {
+  .center-100vw;
+
+  position: relative;
+
+  min-width: 320px;
+  padding-top: 41px;
+
+  background-color: @bg-white;
+}
+
+.contacts__map {
+  z-index: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    padding-top: 47px;
+  }
+
+  .contacts__card-item {
+    margin-bottom: 41px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    padding-top: 63px;
+  }
+}

@@ -5,27 +5,20 @@
 .tool__label {
   position: relative;
 
-  width: 1px;
+  width: 50px;
   height: 53px;
   margin: 0;
   padding: 0;
-  padding-right: 13px;
 }
 
 .tool__label::before {
-  position: absolute;
-  top: 0;
-  left: -35px;
-
-  display: block;
+  .pseudo-absolute;
   width: 53px;
   height: 53px;
 
   background-color: @bg-light-grey;
   background-position: center;
   background-repeat: no-repeat;
-
-  content: "";
 }
 
 .tool__label--crop::before {
@@ -53,10 +46,6 @@
 }
 
 .tool__scale {
-  position: absolute;
-  top: auto;
-  left: 0;
-
   display: none;
   width: 240px;
   height: 2px;
@@ -71,7 +60,7 @@
 .tool__scale-control {
   position: absolute;
   top: -7px;
-  left: 100px;
+  left: 191px;
   z-index: 2;
 
   width: 15px;
@@ -83,4 +72,109 @@
   background-color: @bg-white;
   border: 2px solid @font-red;
   border-radius: 50%;
+}
+
+@media (min-width: @tablet-width) {
+  .tool {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    min-height: 48px;
+    height: 48px;
+  }
+
+  .tool__scale {
+    display: block;
+    width: 203px;
+    margin-top: 12px;
+  }
+
+  .tool__label {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  .tool__label::before {
+    width: 25px;
+    height: 25px;
+
+    background-size: contain;
+  }
+
+  .tool__label--crop::before {
+    background-image: url("../img/icon-editor-crop-active.svg");
+  }
+
+  .tool__label--fill::before {
+    top: 3px;
+
+    background-image: url("../img/icon-editor-fill-active.svg");
+  }
+
+  .tool__label--contrast::before {
+    top: 2px;
+    left: 7px;
+
+    width: 17px;
+    height: 17px;
+
+    background-image: url("../img/icon-editor-contrast-active.svg");
+  }
+
+  .tool__scale--crop .tool__scale-control {
+    left: 146px;
+  }
+
+  .tool__scale--fill .tool__scale-control {
+    left: 25px;
+  }
+
+  .tool__scale--contrast .tool__scale-control {
+    left: 96px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tool {
+    min-height: 59px;
+    height: auto;
+  }
+
+  .tool__label {
+    width: 48px;
+    height: 48px;
+    margin-right: 69px;
+  }
+
+  .tool__label::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tool__scale {
+    width: 290px;
+    margin-top: 23px;
+  }
+
+  .tool__label--contrast::before {
+    top: 6px;
+
+    width: 33px;
+    height: 33px;
+  }
+
+  .tool__scale--crop .tool__scale-control {
+    left: 72px;
+  }
+
+  .tool__scale--fill .tool__scale-control {
+    left: 248px;
+  }
+
+  .tool__scale--contrast .tool__scale-control {
+    left: 162px;
+  }
 }
