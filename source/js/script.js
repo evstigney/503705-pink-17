@@ -62,10 +62,6 @@ buttonMenuToggle.addEventListener('click', function () {
   }
 });
 
-
-
-
-
 /*---- интерактивная карта ----*/
 
 var initMap = function () {
