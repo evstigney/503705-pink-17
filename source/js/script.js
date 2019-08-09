@@ -5,28 +5,26 @@ var pageHeader = document.querySelector('.page-header');
 var buttonMenuClose = document.querySelector('.page-header__menu-toggle--close');
 var buttonMenuOpen = document.querySelector('.page-header__menu-toggle--open');
 var buttonMenuAccessibility = document.querySelector('.page-header__menu-toggle span.visually-hidden');
-var mainNav = document.querySelector('.main-nav');
+var mainNav = document.querySelector('.page-header__nav');
 var mainLogo = document.querySelector('.page-header__logo');
 
 var hiddenMainNav = function () {
-  mainNav.style.display = 'none';
+  mainNav.classList.add('page-header__nav--hidden');
 };
 
 var changeMenuButtonToOpen = function () {
   buttonMenuClose.classList.add('page-header__menu-toggle--open');
   buttonMenuClose.classList.remove('page-header__menu-toggle--close');
-  buttonMenuClose.style.top = '89px';
-  buttonMenuClose.style.right = '21px';
   buttonMenuAccessibility.textContent = 'Открыть меню';
 };
 
 var changeMainLogoToClosedMenu = function () {
-  mainLogo.style.top = '69px';
+  mainLogo.classList.add('page-header__logo--closed-menu');
 };
 
 var changePageHeaderToClosedMenu = function () {
-  body.style.marginTop = '-71px';
-  pageHeader.classList.add('page-header__menu--closed');
+  body.classList.add('menu-closed');
+  pageHeader.classList.add('page-header__menu--close');
   pageHeader.classList.remove('page-header__menu--open');
 };
 
