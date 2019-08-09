@@ -2,24 +2,38 @@
 
 var body = document.querySelector('body');
 var pageHeader = document.querySelector('.page-header');
-var buttonMenuClose = document.querySelector('.page-header__menu-toggle--close');
+var buttonMenuToggle = document.querySelector('.page-header__menu-toggle');
 var buttonMenuOpen = document.querySelector('.page-header__menu-toggle--open');
 var buttonMenuAccessibility = document.querySelector('.page-header__menu-toggle span.visually-hidden');
 var mainNav = document.querySelector('.page-header__nav');
 var mainLogo = document.querySelector('.page-header__logo');
 
-var hiddenMainNav = function () {
+var hideMainNav = function () {
   mainNav.classList.add('page-header__nav--hidden');
 };
 
+var showMainNav = function () {
+  mainNav.classList.remove('page-header__nav--hidden');
+}
+
 var changeMenuButtonToOpen = function () {
-  buttonMenuClose.classList.add('page-header__menu-toggle--open');
-  buttonMenuClose.classList.remove('page-header__menu-toggle--close');
+  buttonMenuToggle.classList.add('page-header__menu-toggle--open');
+  buttonMenuToggle.classList.remove('page-header__menu-toggle--close');
   buttonMenuAccessibility.textContent = 'Открыть меню';
+};
+
+var changeMenuButtonToClose = function () {
+  buttonMenuToggle.classList.remove('page-header__menu-toggle--open');
+  buttonMenuToggle.classList.add('page-header__menu-toggle--close');
+  buttonMenuAccessibility.textContent = 'Закрыть меню';
 };
 
 var changeMainLogoToClosedMenu = function () {
   mainLogo.classList.add('page-header__logo--closed-menu');
+};
+
+var changeMainLogoToOpenedMenu = function () {
+  mainLogo.classList.remove('page-header__logo--closed-menu');
 };
 
 var changePageHeaderToClosedMenu = function () {
@@ -28,12 +42,28 @@ var changePageHeaderToClosedMenu = function () {
   pageHeader.classList.remove('page-header__menu--open');
 };
 
-buttonMenuClose.addEventListener('click', function () {
-  hiddenMainNav();
-  changeMenuButtonToOpen();
-  changeMainLogoToClosedMenu();
-  changePageHeaderToClosedMenu();
+var changePageHeaderToOpenedMenu = function () {
+  body.classList.remove('menu-closed');
+  pageHeader.classList.remove('page-header__menu--close');
+  pageHeader.classList.add('page-header__menu--open');
+};
+
+buttonMenuToggle.addEventListener('click', function () {
+  if (buttonMenuToggle.classList.contains('page-header__menu-toggle--close')) {
+    hideMainNav();
+    changeMenuButtonToOpen();
+    changeMainLogoToClosedMenu();
+    changePageHeaderToClosedMenu();
+  } else {
+    showMainNav();
+    changeMenuButtonToClose();
+    changeMainLogoToOpenedMenu();
+    changePageHeaderToOpenedMenu();
+  }
 });
+
+
+
 
 
 /*---- интерактивная карта ----*/
