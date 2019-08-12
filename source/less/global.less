@@ -51,6 +51,11 @@ a:active {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: top center;
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: auto 853px;
+    }
   }
 
   body > * {
