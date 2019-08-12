@@ -21,14 +21,23 @@
   .pseudo-absolute;
   .center-100vw;
 
+  min-width: 320px;
+
   background-color: @bg-grey;
   background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 }
 
-.banner__picture {
+.banner__picture-wrapper {
   position: relative;
+
+  bottom: 0;
 
   line-height: 0;
 }

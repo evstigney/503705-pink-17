@@ -44,10 +44,10 @@
           <p class="banner__slogan">
             Взгляните на жизнь иначе!
           </p>
-          <picture class="banner__picture">
+          <picture class="banner__picture-wrapper">
             <source srcset="img/iphone-hand-desktop@1x.png" media="(min-width: 1200px)">
             <source srcset="img/iphone-hand-tablet@1x.png" media="(min-width: 660px)">
-            <img src="img/iphone-hand-mobile@1x.png" alt="Фотоприложение Pink раскрасит ваши будни">
+            <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Фотоприложение Pink раскрасит ваши будни">
           </picture>
         </div>
         <a class="button button--download download-app__button" href="https://itunes.apple.com">Скачать приложение</a>
@@ -109,7 +109,7 @@
             <picture class="features-list__item-picture features-list__item-picture--third">
               <source srcset="img/iphone-screen-3-desktop@1x.png" media="(min-width: 1200px)">
               <source srcset="img/iphone-screen-3-tablet@1x.png" media="(min-width: 660px)">
-              <img src="img/iphone-screen-mobile@1x.png" alt="Пример применения розового фильтра и смайлика от Pink">
+              <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Пример применения розового фильтра и смайлика от Pink">
             </picture>
           </li>
         </ul>
@@ -281,7 +281,7 @@
         </a>
       </div>
     </footer>
-    <script async defer src="js/picturefill.min/js"></script>
+    <script async defer src="js/picturefill.min.js"></script>
     <script async defer src="js/script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1a4gRDY0iZ1WLCSKeqjaCfPm6gDjSukM&callback=initMap"></script>
   </body>
