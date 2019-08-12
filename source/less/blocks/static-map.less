@@ -36,6 +36,11 @@
 
     background-image: url("../img/bg-map-tablet@1x.jpg");
     background-position: bottom 28% center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .static-map::before {

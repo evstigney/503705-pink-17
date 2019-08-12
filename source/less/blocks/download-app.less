@@ -69,6 +69,11 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: bottom -1px center;
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   .download-app__banner {
