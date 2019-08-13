@@ -15,7 +15,7 @@
 .contacts-card::after {
   .pseudo-absolute;
 
-  top: 100%;
+  top: calc(100% - 1px);
   left: auto;
   z-index: 2;
 
@@ -42,6 +42,14 @@
 
 .contacts-card > * {
   width: 320px;
+}
+
+.contacts-card__slogan-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .contacts-card__slogan {
