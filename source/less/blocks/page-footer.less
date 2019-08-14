@@ -7,6 +7,26 @@
 
 .page-footer__logo {
   margin-bottom: 31px;
+
+  color: @font-dark;
+}
+
+.page-footer__logo:hover {
+  color: @font-red;
+}
+
+.page-footer__logo:active {
+  color: @font-dark;
+
+  opacity: 0.3;
+}
+
+.page-footer__logo-star {
+  display: none;
+}
+
+.page-footer__logo-spectacles {
+  display: none;
 }
 
 .page-footer__social-list {
@@ -68,6 +88,22 @@
 
   .page-footer__logo {
     margin-right: 236px;
+  }
+
+  .page-footer__logo-star {
+    display: inline-block;
+
+    vertical-align: middle;
+  }
+
+  .page-footer__logo-spectacles--tablet {
+    display: none;
+  }
+
+  .page-footer__logo-spectacles {
+    display: inline-block;
+
+    vertical-align: middle;
   }
 
   .page-footer__dev-info {
