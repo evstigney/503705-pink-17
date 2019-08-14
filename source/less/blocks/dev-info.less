@@ -6,7 +6,17 @@
   display: inline-block;
   margin-left: 7px;
 
+  color: @font-red;
+
   vertical-align: middle;
+}
+
+.dev-info__icon:hover {
+  color: @font-dark;
+}
+
+.dev-info__icon:active {
+  color: fade(@font-black, 30);
 }
 
 @media (min-width: @desktop-width) {
