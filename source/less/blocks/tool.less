@@ -5,44 +5,30 @@
 .tool__label {
   position: relative;
 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   width: 50px;
-  height: 53px;
+  height: 50px;
   margin: 0;
   padding: 0;
+
+  color: fade(@font-black, 30);
 }
 
-.tool__label::before {
-  .pseudo-absolute;
-  width: 53px;
-  height: 53px;
-
-  background-color: @bg-light-grey;
-  background-position: center;
-  background-repeat: no-repeat;
+.box-input:checked + .tool__label {
+  color: @font-red;
 }
 
-.tool__label--crop::before {
-  background-image: url("../img/icon-editor-crop.svg");
+.tool__label:hover,
+.box-input:checked + .tool__label:hover {
+  color: fade(@font-black, 50);
 }
 
-.box-input:checked + .tool__label--crop::before {
-  background-image: url("../img/icon-editor-crop-active.svg");
-}
-
-.tool__label--fill::before {
-  background-image: url("../img/icon-editor-fill.svg");
-}
-
-.box-input:checked + .tool__label--fill::before {
-  background-image: url("../img/icon-editor-fill-active.svg");
-}
-
-.tool__label--contrast::before {
-  background-image: url("../img/icon-editor-contrast.svg");
-}
-
-.box-input:checked + .tool__label--contrast::before {
-  background-image: url("../img/icon-editor-contrast-active.svg");
+.tool__label-img {
+  position: relative;
 }
 
 .tool__scale {
@@ -100,33 +86,22 @@
     width: 25px;
     height: 25px;
     margin-right: 10px;
+
+    color: @font-red;
   }
 
-  .tool__label::before {
-    width: 25px;
-    height: 25px;
-
-    background-size: contain;
+  .tool__label--fill {
+    top: 4px;
   }
 
-  .tool__label--crop::before {
-    background-image: url("../img/icon-editor-crop-active.svg");
-  }
-
-  .tool__label--fill::before {
-    top: 3px;
-
-    background-image: url("../img/icon-editor-fill-active.svg");
-  }
-
-  .tool__label--contrast::before {
-    top: 2px;
-    left: 7px;
+  .tool__label--contrast {
+    top: 5px;
+    left: 6px;
 
     width: 17px;
     height: 17px;
 
-    background-image: url("../img/icon-editor-contrast-active.svg");
+    margin-right: 18px;
   }
 
   .tool__scale--crop .tool__scale-control {
@@ -154,21 +129,14 @@
     margin-right: 69px;
   }
 
-  .tool__label::before {
-    width: 48px;
-    height: 48px;
-  }
-
   .tool__scale {
     width: 290px;
     margin-top: 23px;
   }
 
-  .tool__label--contrast::before {
-    top: 6px;
-
-    width: 33px;
-    height: 33px;
+  .tool__label--contrast {
+    top: 0;
+    left: 0;
   }
 
   .tool__scale--crop .tool__scale-control {
