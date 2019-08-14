@@ -72,10 +72,10 @@
   position: absolute;
   z-index: 10;
 
-  width: 50px;
-  height: 24px;
   margin: 0;
   padding: 0;
+
+  color: @font-white;
 
   background-color: transparent;
   background-position: top center;
@@ -84,18 +84,26 @@
   border: none;
 }
 
+.page-header__menu-toggle:hover {
+  color: @font-red;
+}
+
 .page-header__menu-toggle--close {
   top: 20px;
-  right: 6px;
+  right: 19px;
+}
 
-  background-image: url("../img/icon-menu-cross.svg");
+.page-header__menu-toggle--close .page-header__menu-toggle-burger {
+  display: none;
 }
 
 .page-header__menu-toggle--open {
   top: 89px;
   right: 21px;
+}
 
-  background-image: url("../img/icon-menu-burger.svg");
+.page-header__menu-toggle--open .page-header__menu-toggle-cross {
+  display: none;
 }
 
 .page-header__nav--hidden {
