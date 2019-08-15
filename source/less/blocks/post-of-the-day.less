@@ -7,6 +7,7 @@
 .post-of-the-day__header {
   position: absolute;
   right: 0;
+  z-index: 1;
 
   display: block;
   margin: 0;
@@ -26,6 +27,13 @@
   background-color: @bg-red;
 }
 
+.post-of-the-day__image {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
 @media (min-width: @tablet-width) {
   .post-of-the-day__header {
     top: 57px;
@@ -34,7 +42,6 @@
   .post-of-the-day .post__image-full {
     width: @tablet-width;
     height: 509px;
-    background-color: @bg-light-grey;
   }
 
   .post-of-the-day {
