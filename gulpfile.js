@@ -10,15 +10,15 @@ var server = require("browser-sync").create();
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
-    .pipe(plumber())
+    /*.pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
+    .pipe(sourcemap.write("."))*/
     .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
+    /*.pipe(server.stream());*/
 });
 
 gulp.task("server", function () {
