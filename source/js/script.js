@@ -38,14 +38,14 @@ var changeMainLogoToOpenedMenu = function () {
 
 var changePageHeaderToClosedMenu = function () {
   body.classList.add('menu-closed');
-  pageHeader.classList.add('page-header__menu--close');
-  pageHeader.classList.remove('page-header__menu--open');
+  pageHeader.classList.add('page-header--menu-close');
+  pageHeader.classList.remove('page-header--menu-open');
 };
 
 var changePageHeaderToOpenedMenu = function () {
   body.classList.remove('menu-closed');
-  pageHeader.classList.remove('page-header__menu--close');
-  pageHeader.classList.add('page-header__menu--open');
+  pageHeader.classList.remove('page-header--menu-close');
+  pageHeader.classList.add('page-header--menu-open');
 };
 
 buttonMenuToggle.addEventListener('click', function () {
