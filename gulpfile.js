@@ -4,21 +4,32 @@ var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var less = require("gulp-less");
+var path = require("path");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
+var path = require("path");
+
+gulp.task("less", function () {
+  return gulp.src("./less/**/*.less")
+    .pipe(less({
+      paths: [ path.join(__dirname, "less", "includes") ]
+    }))
+    .pipe(gulp.dest('./source/css'));
+})
+
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
-    /*.pipe(plumber())
+    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))*/
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    /*.pipe(server.stream());*/
+    //.pipe(server.stream());
 });
 
 gulp.task("server", function () {
