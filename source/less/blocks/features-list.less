@@ -78,24 +78,15 @@
 
   .features-list::before {
     .pseudo-absolute;
-
-    left: 50%;
-
-    width: 100vw;
-
-    transform: translateX(-50%);
+    .center-100vw;
   }
 
   .features-list::after {
     .pseudo-absolute;
+    .center-100vw;
     .bg-diagonal(@bg-white, @bg-light-grey);
 
-    left: 50%;
-
-    width: 100vw;
     height: 79px;
-
-    transform: translateX(-50%);
   }
 
   .features-list__item {

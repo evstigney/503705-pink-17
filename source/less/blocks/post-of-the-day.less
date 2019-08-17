@@ -74,6 +74,7 @@
 
 @media (min-width: @desktop-width) {
   .post-of-the-day {
+    justify-content: flex-start;
     width: 940px;
     margin-bottom: 48px;
   }
@@ -88,9 +89,14 @@
     top: 54px;
   }
 
+  .post-of-the-day .post__author {
+    width: 100%;
+  }
+
   .post-of-the-day .post__likes {
-    margin-top: 0;
-    margin-right: 15px;
+    position: absolute;
+    top: 530px;
+    right: 2px;
   }
 
   .post-of-the-day .post__description {

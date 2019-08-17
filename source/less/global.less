@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100vw;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,8 +49,9 @@ a:active {
 @media (min-width: @desktop-width) {
   body::before {
     .pseudo-absolute;
-    .center-100vw;
 
+    width: 100vw;
+    max-width: 100%;
     height: 853px;
 
     background-color: @bg-dark-grey;
