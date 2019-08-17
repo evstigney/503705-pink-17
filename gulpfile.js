@@ -76,6 +76,18 @@ gulp.task("html", function () {
     .pipe(gulp.dest("source"));
 })
 
+gulp.task("copy", function () {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("server", function () {
   server.init({
     server: "source/",
@@ -89,4 +101,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
+gulp.task("build", gulp.series("css", "sprite", "html"));
 gulp.task("start", gulp.series("css", "server"));
