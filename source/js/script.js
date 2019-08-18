@@ -8,6 +8,8 @@ var buttonMenuAccessibility = document.querySelector('.page-header__menu-toggle 
 var mainNav = document.querySelector('.page-header__nav');
 var mainLogo = document.querySelector('.page-header__logo');
 
+buttonMenuToggle.classList.remove('no-js'); // показываем кнопку если js работает в браузере
+
 var hideMainNav = function () {
   mainNav.classList.add('page-header__nav--hidden');
 };
