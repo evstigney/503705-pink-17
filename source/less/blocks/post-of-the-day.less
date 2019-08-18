@@ -27,6 +27,10 @@
   background-color: @bg-red;
 }
 
+.post-of-the-day__image-full {
+  height: 136px;
+}
+
 .post-of-the-day__image {
   position: absolute;
   left: 50%;
@@ -39,7 +43,7 @@
     top: 57px;
   }
 
-  .post-of-the-day .post__image-full {
+  .post-of-the-day__image-full {
     width: @tablet-width;
     height: 509px;
   }
@@ -54,20 +58,28 @@
     padding-bottom: 12px;
   }
 
-  .post-of-the-day .post__description {
+  .post-of-the-day__author {
+    width: 100%;
+  }
+
+  .post-of-the-day__description {
     order: 2;
     width: auto;
     margin-left: 27px;
     margin-right: 23px;
   }
 
-  .post-of-the-day .post__likes {
+  .post-of-the-day__likes {
+    position: absolute;
+    top: 534px;
+    right: 0;
+
     width: auto;
     margin-right: 12px;
     margin-left: auto;
   }
 
-  .post-of-the-day .post__likes-total {
+  .post-of-the-day__likes-total {
     margin-right: 18px;
   }
 }
@@ -79,7 +91,7 @@
     margin-bottom: 48px;
   }
 
-  .post-of-the-day .post__image-full {
+  .post-of-the-day__image-full {
     min-width: 1200px;
     max-width: 100vw;
     height: 507px;
@@ -89,17 +101,13 @@
     top: 54px;
   }
 
-  .post-of-the-day .post__author {
-    width: 100%;
-  }
-
-  .post-of-the-day .post__likes {
+  .post-of-the-day__likes {
     position: absolute;
     top: 530px;
     right: 2px;
   }
 
-  .post-of-the-day .post__description {
+  .post-of-the-day__description {
     min-height: auto;
   }
 }

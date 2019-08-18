@@ -18,12 +18,18 @@
   color: fade(@font-black, 30);
 }
 
+.tool__label--contrast {
+  width: 33px;
+  height: 33px;
+  padding-top: 7px;
+  padding-left: 7px;
+}
+
 .box-input:checked + .tool__label {
   color: @font-red;
 }
 
-.tool__label:hover,
-.box-input:checked + .tool__label:hover {
+.tool__label:hover {
   color: fade(@font-black, 50);
 }
 
@@ -95,13 +101,10 @@
   }
 
   .tool__label--contrast {
-    top: 5px;
-    left: 6px;
-
     width: 17px;
     height: 17px;
 
-    margin-right: 18px;
+    margin-right: 11px;
   }
 
   .tool__scale--crop .tool__scale-control {
@@ -137,6 +140,9 @@
   .tool__label--contrast {
     top: 0;
     left: 0;
+
+    width: 35px;
+    height: 35px;
   }
 
   .tool__scale--crop .tool__scale-control {

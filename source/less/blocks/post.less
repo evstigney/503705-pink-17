@@ -5,12 +5,13 @@
   align-items: center;
   width: 279px;
   padding: 0;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 
   background-color: @bg-light-grey;
 }
 
 .post__image-full {
+  height: 180px;
   margin-bottom: 19px;
   font-size: 0;
   line-height: 0;
@@ -30,6 +31,7 @@
 }
 
 .post__description {
+  width: 220px;
   margin: 0;
   margin-bottom: 9px;
   margin-left: 17px;
@@ -56,6 +58,7 @@
   .post {
     width: 300px;
     min-height: 434px;
+    margin-bottom: 20px;
   }
 
   .post__image-full {
@@ -94,6 +97,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .post {
+    margin-bottom: 54px;
+  }
+
   .post__image-full {
     height: 401px;
   }
