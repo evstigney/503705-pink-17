@@ -33,9 +33,9 @@
 
 .post-of-the-day__image {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 100vw);
 
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateX(100vw);
 }
 
 @media (min-width: @tablet-width) {
