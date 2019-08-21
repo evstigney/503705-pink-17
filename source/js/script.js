@@ -1,4 +1,4 @@
-/*---- главное меню ----*/
+//---- главное меню ----
 
 var body = document.querySelector('body');
 var pageHeader = document.querySelector('.page-header');
@@ -7,8 +7,6 @@ var buttonMenuOpen = document.querySelector('.page-header__menu-toggle--open');
 var buttonMenuAccessibility = document.querySelector('.page-header__menu-toggle span.visually-hidden');
 var mainNav = document.querySelector('.page-header__nav');
 var mainLogo = document.querySelector('.page-header__logo');
-
-buttonMenuToggle.classList.remove('no-js'); // показываем кнопку если js работает в браузере
 
 var hideMainNav = function () {
   mainNav.classList.add('page-header__nav--hidden');
@@ -64,7 +62,17 @@ buttonMenuToggle.addEventListener('click', function () {
   }
 });
 
-/*---- интерактивная карта ----*/
+buttonMenuToggle.classList.remove('no-js'); // показываем кнопку если js работает в браузере
+
+//---- скрываем меню, если js работает в браузере ----
+
+hideMainNav();
+changeMenuButtonToOpen();
+changeMainLogoToClosedMenu();
+changePageHeaderToClosedMenu();
+
+
+//---- интерактивная карта ----
 
 var initMap = function () {
   var map = new google.maps.Map(document.getElementById('map'), {
