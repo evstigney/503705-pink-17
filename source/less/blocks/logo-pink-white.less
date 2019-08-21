@@ -1,0 +1,34 @@
+.logo-pink-white__star {
+  display: none;
+}
+
+.logo-pink-white__spectacles,
+.logo-pink-white__spectacles--tablet {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .logo-pink-white__spectacles--tablet {
+    display: inline-block;
+
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo-pink-white__spectacles--tablet {
+    display: none;
+  }
+
+  .logo-pink-white__spectacles {
+    display: inline-block;
+
+    vertical-align: middle;
+  }
+
+  .logo-pink-white__star {
+    display: inline-block;
+
+    vertical-align: middle;
+  }
+}
