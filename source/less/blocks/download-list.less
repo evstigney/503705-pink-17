@@ -7,7 +7,7 @@
   .center-100vw;
 
   top: -113px;
-  left: calc(50% - 100vw - 3px);
+  left: calc(50% - 100vw);
 
   height: calc(100% + 137px);
 
@@ -35,5 +35,9 @@
 @media (min-width: @tablet-width) {
   .download-list {
     width: 280px;
+  }
+
+  .download-list::before {
+    display: none;
   }
 }
