@@ -2,6 +2,18 @@
   align-items: flex-end;
 }
 
+.download-list::before {
+  .pseudo-absolute;
+  .center-100vw;
+
+  top: -113px;
+  left: calc(50% - 100vw - 3px);
+
+  height: calc(100% + 137px);
+
+  background-color: @bg-dark-grey;
+}
+
 .download-list__item {
   display: block;
   width: 47px;
@@ -18,4 +30,10 @@
 
 .download-list__item-microsoft {
   height: 42px;
+}
+
+@media (min-width: @tablet-width) {
+  .download-list {
+    width: 280px;
+  }
 }
