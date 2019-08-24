@@ -26,10 +26,21 @@
 
 @media (min-width: @desktop-width) {
   .features {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .features::before {
+    .pseudo-absolute;
+    .center-100vw;
+
+    z-index: -1;
+
+    background-color: @bg-white;
   }
 
   .features__slogan:last-of-type {

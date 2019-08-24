@@ -18,10 +18,15 @@
   transform: rotate(-135deg);
 }
 
-.slider-arrow:hover {
+.slider-arrow:hover,
+.slider-arrow:focus {
   border-color: fade(@font-dark, 60%);
 }
 
 .slider-arrow:active {
   border-color: fade(@font-dark, 10%);
+}
+
+.slider-arrow:focus {
+  outline: none;
 }
