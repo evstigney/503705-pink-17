@@ -149,6 +149,8 @@
   .page-header {
     position: relative;
 
+    padding: 0;
+
     background-color: transparent;
   }
 
@@ -157,7 +159,7 @@
     top: 0;
     left: calc(50% - 100vw);
 
-    display: block;
+    display: none;
     width: 100vw;
     height: 100%;
 
@@ -173,6 +175,7 @@
     top: 0;
 
     width: 158px;
+    margin-top: 27px;
     margin-left: 131px;
   }
 
@@ -183,12 +186,33 @@
   .page-header__menu-toggle {
     display: none;
   }
-
+  /*
   .page-header--menu-close {
     height: auto;
   }
-
+  */
   .page-header__nav--hidden {
     display: block;
+  }
+
+  .page-header__nav {
+    position: relative;
+
+    padding-top: 26px;
+  }
+
+  .page-header__nav::before {
+    position: absolute;
+    left: calc(50% - 100vw - 12%);
+    bottom: 0;
+
+    width: 100vw;
+    height: 100%;
+
+    background-color: fade(@font-black, 30);
+
+    transform: translateX(-50%) translateX(100vw);
+
+    content: "";
   }
 }
