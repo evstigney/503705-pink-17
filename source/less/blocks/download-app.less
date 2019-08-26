@@ -85,6 +85,15 @@
   margin-right: 32px;
 }
 
+.download-app__picture-wrapper {
+  position: relative;
+  bottom: 0;
+
+  margin-bottom: 27px;
+
+  line-height: 0;
+}
+
 @media (min-width: @tablet-width) {
   .download-app {
     flex-direction: column;
@@ -143,6 +152,13 @@
   .menu-closed .download-app {
     padding-top: 92px;
   }
+
+  .download-app__picture-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: -27px;
+    left: -21px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -187,5 +203,14 @@
 
   .download-app__description {
     margin-left: 130px;
+  }
+
+  .download-app__picture-wrapper {
+    position: absolute;
+    top: auto;
+    bottom: -1px;
+    left: 145px;
+
+    margin-bottom: 0;
   }
 }
