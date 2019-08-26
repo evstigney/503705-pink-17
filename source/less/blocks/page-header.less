@@ -149,25 +149,14 @@
   .page-header {
     position: relative;
 
+    height: 0;
     padding: 0;
 
     background-color: transparent;
   }
 
   .page-header::before {
-    position: absolute;
-    top: 0;
-    left: calc(50% - 100vw);
-
     display: none;
-    width: 100vw;
-    height: 100%;
-
-    background-color: fade(#000000, 30%);
-
-    transform: translateX(-50%) translateX(100vw);
-
-    content: "";
   }
 
   .page-header__logo {
@@ -204,10 +193,11 @@
   .page-header__nav::before {
     position: absolute;
     left: calc(50% - 100vw - 12%);
-    bottom: 0;
+    top: 0;
 
     width: 100vw;
     height: 100%;
+    min-height: 106px;
 
     background-color: fade(@font-black, 30);
 
