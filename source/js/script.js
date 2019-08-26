@@ -48,17 +48,25 @@ var changePageHeaderToOpenedMenu = function () {
   pageHeader.classList.add('page-header--menu-open');
 };
 
+var hideMenuHandler = function () {
+  hideMainNav();
+  changeMenuButtonToOpen();
+  changeMainLogoToClosedMenu();
+  changePageHeaderToClosedMenu();
+};
+
+var showMenuHandler = function () {
+  showMainNav();
+  changeMenuButtonToClose();
+  changeMainLogoToOpenedMenu();
+  changePageHeaderToOpenedMenu();
+};
+
 buttonMenuToggle.addEventListener('click', function () {
   if (buttonMenuToggle.classList.contains('page-header__menu-toggle--close')) {
-    hideMainNav();
-    changeMenuButtonToOpen();
-    changeMainLogoToClosedMenu();
-    changePageHeaderToClosedMenu();
+    hideMenuHandler();
   } else {
-    showMainNav();
-    changeMenuButtonToClose();
-    changeMainLogoToOpenedMenu();
-    changePageHeaderToOpenedMenu();
+    showMenuHandler();
   }
 });
 
@@ -66,10 +74,7 @@ buttonMenuToggle.classList.remove('no-js'); // показываем кнопку
 
 //---- скрываем меню, если js работает в браузере ----
 
-hideMainNav();
-changeMenuButtonToOpen();
-changeMainLogoToClosedMenu();
-changePageHeaderToClosedMenu();
+hideMenuHandler();
 
 
 //---- интерактивная карта ----
