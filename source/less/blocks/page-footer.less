@@ -7,6 +7,7 @@
 
 .page-footer__logo {
   margin-bottom: 35px;
+  margin-right: 43px;
 
   color: @font-dark;
 }
@@ -23,10 +24,15 @@
 
 .page-footer__social-list {
   justify-content: center;
+  width: 243px;
   margin-bottom: 32px;
 }
 
-.page-footer__social-list-item:not(:first-of-type) {
+.page-footer__social-list-item {
+  margin-bottom: 10px;
+}
+
+.page-footer__social-list-item:not(:nth-of-type(4n + 1)) {
   margin-left: 11px;
 }
 
@@ -92,7 +98,12 @@
   }
 
   .page-footer__social-list {
+    width: 325px;
     margin-top: 0;
+  }
+
+  .page-footer__social-list-item:not(:nth-of-type(5n + 1)) {
+    margin-left: 11px;
   }
 
   .page-footer__dev-info {
