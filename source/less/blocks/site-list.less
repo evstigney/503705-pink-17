@@ -78,14 +78,6 @@
     box-shadow: none;
   }
 
-  .main-nav__list-item:not(:nth-of-type(4n)) {
-    margin-right: 84px;
-  }
-
-  .main-nav__list-item:last-of-type .site-list__item {
-    border-bottom: none;
-  }
-
   .site-list__item--active::before {
     .pseudo-absolute;
 
@@ -96,6 +88,10 @@
     height: 2px;
 
     background-color: @bg-white;
+  }
+
+  .main-nav__list-item:last-of-type .site-list__item {
+    border-bottom: none;
   }
 }
 
