@@ -92,3 +92,75 @@ var initMap = function () {
     map: map
   });
 };
+
+//---- отправка формы ----
+
+var buttonSubmit = document.querySelector('.button-submit');
+var buttonSubmitFailure = document.querySelector('.modal__button-submit--failure');
+var buttonSubmitSuccess = document.querySelector('.modal__button-submit--success');
+
+var modalSuccess = document.querySelector('.modal--success');
+var modalFailure = document.querySelector('.modal--failure');
+
+var form = document.querySelector('.competition-form');
+var fieldSurname = document.querySelector('#surname-field');
+var fieldName = document.querySelector('#name-field');
+var fieldEmail = document.querySelector("#email-field");
+var requiredFields = [fieldSurname, fieldName, fieldEmail];
+
+var checkField = function (field) {
+  if (field.value) {
+    field.classList.remove('invalid-field');
+  } else {
+    field.classList.add('invalid-field');
+  }
+};
+
+var checkRequiredFields = function (arr) {
+  var result = true;
+  for (var i = 0; i < arr.length; i++) {
+    if (!(arr[i].value)) {
+      arr[i].classList.add('invalid-field');
+      result = false;
+    }
+  }
+  return result;
+};
+
+var showModal = function (modalWindow) {
+  modalWindow.style.display = 'flex';
+};
+
+var hideModal = function (modalWindow) {
+  modalWindow.style.display = 'none';
+};
+
+fieldSurname.addEventListener('blur', function () {
+  checkField(fieldSurname);
+})
+
+fieldName.addEventListener('blur', function () {
+  checkField(fieldName);
+});
+
+fieldEmail.addEventListener('blur', function () {
+  checkField(fieldEmail);
+});
+
+buttonSubmitFailure.addEventListener('click', function () {
+  hideModal(modalFailure);
+});
+
+buttonSubmitSuccess.addEventListener('click', function () {
+  hideModal(modalSuccess);
+});
+
+buttonSubmit.addEventListener('click', function (evt) {
+  var validation = checkRequiredFields(requiredFields);
+  if (validation) {
+    showModal(modalSuccess);
+  } else {
+    showModal(modalFailure);
+    evt.preventDefault();
+  }
+});
