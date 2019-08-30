@@ -26,7 +26,24 @@
 
 @media (min-width: @desktop-width) {
   .rates {
+    position: relative;
+
     padding-top: 105px;
     padding-bottom: 66px;
+    overflow-x: visible;
+
+    background-color: transparent;
+  }
+
+  .rates::before {
+    .pseudo-absolute;
+    .center-100vw;
+
+    z-index: -1;
+
+    min-width: 1200px;
+    height: calc(100% - 1px);
+
+    background-color: @bg-light-grey;
   }
 }
