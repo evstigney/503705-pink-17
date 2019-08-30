@@ -111,6 +111,22 @@
     background-color: @bg-white;
   }
 
+  .inner-main__main-description::before {
+    position: absolute;
+    left: calc(50% - 100vw);
+    top: 0;
+    z-index: -1;
+
+    min-width: 1200px;
+    height: 100%;
+
+    background-color: @bg-white;
+
+    transform: translateX(-50%) translateX(100vw);
+
+    content: "";
+  }
+
   .inner-main {
     margin-bottom: 36px;
   }
@@ -129,6 +145,10 @@
   }
 
   .inner-main--photogallery {
-    margin-bottom: 100px;
+    margin-bottom: 98px;
+  }
+
+  .inner-main__bottom-description {
+    margin-bottom: 65px;
   }
 }

@@ -98,12 +98,18 @@
   }
 
   .banner--inner::before {
+    min-width: 1200px;
+    padding: 200px;
+
     background-color: #2b3a4a;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: bottom 81% center;
 
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-position: bottom 102% left 49%;
+      background-size: 218%;
     }
   }
 
