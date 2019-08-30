@@ -5,3 +5,56 @@
 
   text-align: center;
 }
+
+.slider-bullets__bullet {
+  position: absolute;
+  left: -5000%;
+
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-bullets__label {
+  position: relative;
+
+  margin: 0;
+  margin-right: 25px;
+  padding: 0;
+}
+
+.slider-bullets__label::before {
+  .pseudo-absolute;
+
+  top: auto;
+  bottom: 2px;
+  left: 0;
+
+  width: 7px;
+  height: 7px;
+
+
+  background-color: #bec2c7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px @bg-white;
+}
+
+.slider-bullets--rates .slider-bullets__label::before {
+  box-shadow: 0 0 0 5px @bg-light-grey;
+}
+
+.slider-bullets__label:hover::before {
+  background-color: #7e868f;
+}
+
+.slider-bullets__label:active::before {
+  background: linear-gradient(to bottom, fade(@font-dark, 10%), fade(@font-dark, 10%));
+}
+
+.slider-bullets__bullet:checked + .slider-bullets__label::before {
+  z-index: 1;
+  background-color: @bg-white;
+  box-shadow: 0 0 0 3px @font-dark;
+}
