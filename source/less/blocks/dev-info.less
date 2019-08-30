@@ -4,7 +4,7 @@
 
 .dev-info__icon {
   display: inline-block;
-  margin-left: 8px;
+  margin-left: 5px;
 
   color: @font-red;
 
@@ -17,6 +17,12 @@
 
 .dev-info__icon:active {
   .active(@font-black);
+}
+
+@media (min-width: @tablet-width) {
+  .dev-info__icon {
+    margin-left: 8px;
+  }
 }
 
 @media (min-width: @desktop-width) {
