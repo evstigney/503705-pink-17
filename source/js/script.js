@@ -7,6 +7,7 @@ var buttonMenuOpen = document.querySelector('.page-header__menu-toggle--open');
 var buttonMenuAccessibility = document.querySelector('.page-header__menu-toggle span.visually-hidden');
 var mainNav = document.querySelector('.page-header__nav');
 var mainLogo = document.querySelector('.page-header__logo');
+var mainHeader = document.querySelector('.inner-main__main-header');
 
 var hideMainNav = function () {
   mainNav.classList.add('page-header__nav--hidden');
@@ -40,12 +41,14 @@ var changePageHeaderToClosedMenu = function () {
   body.classList.add('menu-closed');
   pageHeader.classList.add('page-header--menu-close');
   pageHeader.classList.remove('page-header--menu-open');
+  mainHeader.classList.add('inner-main__main-header--menu-closed');
 };
 
 var changePageHeaderToOpenedMenu = function () {
   body.classList.remove('menu-closed');
   pageHeader.classList.remove('page-header--menu-close');
   pageHeader.classList.add('page-header--menu-open');
+  mainHeader.classList.remove('inner-main__main-header--menu-closed');
 };
 
 var hideMenuHandler = function () {
