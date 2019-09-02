@@ -41,7 +41,9 @@ var changePageHeaderToClosedMenu = function () {
   body.classList.add('menu-closed');
   pageHeader.classList.add('page-header--menu-close');
   pageHeader.classList.remove('page-header--menu-open');
-  mainHeader.classList.add('inner-main__main-header--menu-closed');
+  if (mainHeader) {
+    mainHeader.classList.add('inner-main__main-header--menu-closed');
+  }
 };
 
 var changePageHeaderToOpenedMenu = function () {
@@ -138,32 +140,44 @@ var hideModal = function (modalWindow) {
   modalWindow.style.display = 'none';
 };
 
-fieldSurname.addEventListener('blur', function () {
-  checkField(fieldSurname);
-})
+if (fieldSurname) {
+  fieldSurname.addEventListener('blur', function () {
+    checkField(fieldSurname);
+  });
+}
 
-fieldName.addEventListener('blur', function () {
-  checkField(fieldName);
-});
+if (fieldName) {
+  fieldName.addEventListener('blur', function () {
+    checkField(fieldName);
+  });
+}
 
-fieldEmail.addEventListener('blur', function () {
-  checkField(fieldEmail);
-});
+if (fieldEmail) {
+  fieldEmail.addEventListener('blur', function () {
+    checkField(fieldEmail);
+  });
+}
 
-buttonSubmitFailure.addEventListener('click', function () {
-  hideModal(modalFailure);
-});
+if (buttonSubmitFailure) {
+  buttonSubmitFailure.addEventListener('click', function () {
+    hideModal(modalFailure);
+  });
+}
 
-buttonSubmitSuccess.addEventListener('click', function () {
-  hideModal(modalSuccess);
-});
+if (buttonSubmitSuccess) {
+  buttonSubmitSuccess.addEventListener('click', function () {
+    hideModal(modalSuccess);
+  });
+}
 
-buttonSubmit.addEventListener('click', function (evt) {
-  var validation = checkRequiredFields(requiredFields);
-  if (validation) {
-    showModal(modalSuccess);
-  } else {
-    showModal(modalFailure);
-    evt.preventDefault();
-  }
-});
+if (buttonSubmit) {
+  buttonSubmit.addEventListener('click', function (evt) {
+    var validation = checkRequiredFields(requiredFields);
+    if (validation) {
+      showModal(modalSuccess);
+    } else {
+      showModal(modalFailure);
+      evt.preventDefault();
+    }
+  });
+}
