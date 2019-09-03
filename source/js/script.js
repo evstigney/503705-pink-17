@@ -8,6 +8,7 @@ var buttonMenuAccessibility = document.querySelector('.page-header__menu-toggle 
 var mainNav = document.querySelector('.page-header__nav');
 var mainLogo = document.querySelector('.page-header__logo');
 var mainHeader = document.querySelector('.inner-main__main-header');
+var indexDownloadSection = document.querySelector(".index-main__download-app");
 
 var hideMainNav = function () {
   mainNav.classList.add('page-header__nav--hidden');
@@ -44,13 +45,21 @@ var changePageHeaderToClosedMenu = function () {
   if (mainHeader) {
     mainHeader.classList.add('inner-main__main-header--menu-closed');
   }
+  if (indexDownloadSection) {
+    indexDownloadSection.classList.remove('index-main__download-app--menu-open');
+  }
 };
 
 var changePageHeaderToOpenedMenu = function () {
   body.classList.remove('menu-closed');
   pageHeader.classList.remove('page-header--menu-close');
   pageHeader.classList.add('page-header--menu-open');
-  mainHeader.classList.remove('inner-main__main-header--menu-closed');
+  if (mainHeader) {
+    mainHeader.classList.remove('inner-main__main-header--menu-closed');
+  }
+  if (indexDownloadSection) {
+    indexDownloadSection.classList.add('index-main__download-app--menu-open');
+  }
 };
 
 var hideMenuHandler = function () {
